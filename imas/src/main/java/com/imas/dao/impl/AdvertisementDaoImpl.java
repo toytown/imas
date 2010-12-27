@@ -12,6 +12,7 @@ import javax.persistence.Query;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.orm.jpa.JpaCallback;
+import org.springframework.stereotype.Repository;
 
 import com.imas.dao.interfaces.AdvertisementDao;
 import com.imas.model.Advertisement;
@@ -19,6 +20,7 @@ import com.imas.model.CategoryType;
 import com.imas.model.Images;
 import com.imas.valueobjects.SearchRequest;
 
+@Repository
 @NamedQuery(name = "findCity", query = "select p from com.oas.model.PostalCode p")
 public class AdvertisementDaoImpl extends GenericDaoImpl<Advertisement, Long> implements AdvertisementDao {
 

@@ -1,32 +1,60 @@
 package com.imas.dao.impl;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
-import javax.persistence.EntityManager;
 import javax.persistence.NamedQuery;
-import javax.persistence.PersistenceException;
-import javax.persistence.Query;
 
-import org.springframework.dao.DataAccessException;
-import org.springframework.orm.jpa.JpaCallback;
 import org.springframework.stereotype.Repository;
 
 import com.imas.dao.interfaces.AdvertisementDao;
 import com.imas.model.Advertisement;
-import com.imas.model.CategoryType;
 import com.imas.model.Images;
 import com.imas.valueobjects.SearchRequest;
 
-@Repository
+@Repository("advertisementDao")
 @NamedQuery(name = "findCity", query = "select p from com.oas.model.PostalCode p")
 public class AdvertisementDaoImpl extends GenericDaoImpl<Advertisement, Long> implements AdvertisementDao {
 
+    @Override
+    public Advertisement findRealStateAdvertById(Long appartmentId) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public List<Advertisement> findAllAppartments(String zipCode, String city) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public List<String> findCities(String searchStr) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public List<Advertisement> findRealStateBySearchCriteria(SearchRequest searchRequest) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Images findImageById(long id) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public void deleteImage(Images appartmentImage) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    /*
 	private static final String SEARCH_QUERY = "SELECT a FROM com.oas.model.Advertisement a WHERE 1=1 ";
 	private static final String DEFAULT_ORDER_BY = "ORDER by a.totalRooms desc, a.cost asc, a.size desc, a.insertDate desc";
-
+	
 	public List<Advertisement> findAllAppartments(String zipCode, String city) {
 		return null; //super.findAll();
 	}
@@ -59,6 +87,7 @@ public class AdvertisementDaoImpl extends GenericDaoImpl<Advertisement, Long> im
 		});
 	}
 
+	
 	private Map<String, Map> buildSearchQuery(SearchRequest searchRequest) {
 		Map returnValue = new HashMap<String, Map>();
 
@@ -234,5 +263,5 @@ public class AdvertisementDaoImpl extends GenericDaoImpl<Advertisement, Long> im
 	public List<String> findCities(String searchStr) {
 		return getJpaTemplate().find("SELECT p.city FROM com.oas.model.PostalCode p WHERE p.city LIKE ?", searchStr + "%");
 	}
-
+    */
 }

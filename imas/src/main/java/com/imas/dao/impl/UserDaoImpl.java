@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.imas.dao.interfaces.UserDao;
 import com.imas.model.User;
 
-@Repository
+@Repository("userDao")
 public class UserDaoImpl extends GenericDaoImpl<User, Long> implements UserDao {
 
     @Override

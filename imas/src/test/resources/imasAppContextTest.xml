@@ -24,7 +24,7 @@
 	<context:annotation-config />
 
 	<!-- Scans for stereotype -->
-	<context:component-scan base-package="com.imas.dao.*, com.imas.services.*" />
+	<context:component-scan base-package="com.imas.*" />
 
 	<!-- Transaction are driven by annotation -->
 	<tx:annotation-driven />
@@ -39,11 +39,11 @@
 		<property name="ignoreResourceNotFound" value="true" />
 		<property name="ignoreUnresolvablePlaceholders" value="true" />
 	</bean>
-  	
-	
-	
-	<bean id="appProperties" class="com.wirecard.ib.web">
-		<property name="imageStore" ref="${imagestore.location}" />
+
+
+
+	<bean id="appProperties" class="com.imas.web.main.AppConfig">
+		<property name="imageStore" value="${imagestore.location}" />
 	</bean>
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
@@ -66,7 +66,7 @@
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="jpaVendorAdapter" ref="jpaVendorAdapter" />
-		<property name="persistenceXmlLocation" value="classpath*:META-INF/persistence.xml" />
+		<property name="persistenceXmlLocation" value="classpath*:/META-INF/persistence.xml" />
 		<property name="loadTimeWeaver">
 			<bean
 				class="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver" />
@@ -74,8 +74,21 @@
 		<property name="persistenceUnitName" value="imasPU" />
 	</bean>
 
-	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
-		p:entityManagerFactory-ref="entityManagerFactory">
+ 	<!-- Configure the session factory to scan the model packages for annotated classes. -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration"/>
+        <property name="packagesToScan">
+            <list>
+                <value>com.imas.model</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <ref bean="hibernateProperties"/>
+        </property>
+    </bean>
+    
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager" p:entityManagerFactory-ref="entityManagerFactory">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
@@ -102,7 +115,6 @@
 		<property name="databasePlatform" value="org.hibernate.dialect.MySQLDialect" />
 		<property name="generateDdl" value="true" />
 		<property name="showSql" value="true" />
-		<property name="auto-import" value="true" />
 	</bean>
 
 </beans>

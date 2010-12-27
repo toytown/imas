@@ -17,7 +17,7 @@ import com.imas.model.CategoryType;
 import com.imas.model.HeatingType;
 import com.imas.model.PostalCode;
 
-@Repository
+@Repository("commonDao")
 public class CommonDaoImpl implements CommonDao {
 	
     private EntityManager entityManager;
@@ -25,7 +25,7 @@ public class CommonDaoImpl implements CommonDao {
     @Autowired
     protected SimpleJdbcTemplate jdbcTemplate;
     
-    @PersistenceContext(name = "billingPU")
+    @PersistenceContext(name = "imasPU")
     public void setEntityManager(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
@@ -36,12 +36,12 @@ public class CommonDaoImpl implements CommonDao {
 	}
 
 	public List<HeatingType> getHeatingTypes() {
-        TypedQuery<HeatingType> q = entityManager.createQuery("select t from HeatingType t", HeatingType.class);
+        TypedQuery<HeatingType> q = entityManager.createQuery("from HeatingType as h", HeatingType.class);
         return q.getResultList();   		
 	}
 	
 	public List<Category> getCategories() {
-        TypedQuery<Category> q = entityManager.createQuery("select t from Category t", Category.class);
+        TypedQuery<Category> q = entityManager.createQuery("from Category as c", Category.class);
         return q.getResultList();  		
 	}
 

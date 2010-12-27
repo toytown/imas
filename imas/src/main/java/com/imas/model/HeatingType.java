@@ -15,9 +15,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
 public class HeatingType implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 3346949578228859950L;
 
 	@Id

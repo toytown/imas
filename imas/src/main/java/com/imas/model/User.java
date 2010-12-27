@@ -61,7 +61,7 @@ public class User implements Serializable {
 	private Set<Advertisement> advertisement =  new HashSet<Advertisement>(0);	
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "customer")
-	private List<CustomerContactDetails> customerContactDetails =  new ArrayList<CustomerContactDetails>(0);	
+	private List<ContactDetails> customerContactDetails =  new ArrayList<ContactDetails>(0);	
 	
 	@Column(name = "activation_code", length = 64)
 	private String activationCode;
@@ -156,11 +156,11 @@ public class User implements Serializable {
 		this.advertisement = advertisement;
 	}
 
-	public List<CustomerContactDetails> getContactDetails() {
+	public List<ContactDetails> getContactDetails() {
 		return customerContactDetails;
 	}
 
-	public void setContactDetails(List<CustomerContactDetails> customerContactDetails) {
+	public void setContactDetails(List<ContactDetails> customerContactDetails) {
 		this.customerContactDetails = customerContactDetails;
 	}
 

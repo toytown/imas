@@ -13,7 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity(name = "OAS_CONTACT_DETAILS")
-public class CustomerContactDetails implements Serializable {
+public class ContactDetails implements Serializable {
 
 	private static final long serialVersionUID = 3623565387080941741L;
 
@@ -218,7 +218,7 @@ public class CustomerContactDetails implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		CustomerContactDetails other = (CustomerContactDetails) obj;
+		ContactDetails other = (ContactDetails) obj;
 		if (city == null) {
 			if (other.city != null)
 				return false;

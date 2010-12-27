@@ -1,0 +1,27 @@
+<ehcache>
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"/>
+
+     <cache name="com.oas.model.CategoryType"
+           maxElementsInMemory="1000"/>
+           
+     <cache name="com.oas.model.HeatingType" 
+           maxElementsInMemory="1000"/>
+           
+     <cache name="com.oas.model.PostalCode" 
+           maxElementsInMemory="1000"/>
+           
+	<cache name="com.oas.model.Category" 
+           maxElementsInMemory="1000"/>
+                                 
+</ehcache>

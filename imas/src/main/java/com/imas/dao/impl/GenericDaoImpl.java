@@ -1,27 +1,28 @@
 package com.imas.dao.impl;
 
 import java.io.Serializable;
-import java.lang.reflect.ParameterizedType;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import org.springframework.orm.jpa.JpaTemplate;
-import org.springframework.orm.jpa.support.JpaDaoSupport;
 import org.springframework.stereotype.Repository;
 
 import com.imas.dao.interfaces.GenericDao;
 
-@Repository
-public class GenericDaoImpl<E, PK extends Serializable> extends JpaDaoSupport implements GenericDao<E, PK> {
+@Repository("genericDao")
+public class GenericDaoImpl<E, PK extends Serializable> implements GenericDao<E, PK> {
 
     protected static final Logger logger = Logger.getLogger(GenericDaoImpl.class);
     
     protected EntityManager entityManager;
     
     @Autowired
+    @Qualifier("jdbcTemplate")
     protected SimpleJdbcTemplate jdbcTemplate;
     
     @Autowired
@@ -29,15 +30,11 @@ public class GenericDaoImpl<E, PK extends Serializable> extends JpaDaoSupport im
 
     private Class<E> entityClass;
 
-    @SuppressWarnings("unchecked")
-    public GenericDaoImpl() {
-        ParameterizedType genericSuperclass = (ParameterizedType) getClass()
-                .getGenericSuperclass();
-        this.entityClass = (Class<E>) genericSuperclass
-                .getActualTypeArguments()[0];
+    @PersistenceContext(name = "imasPU")
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
-
-
+    
     public void delete(E entity) {
         entityManager.remove(entity);
     }

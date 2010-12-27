@@ -5,21 +5,23 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class CommonDaoImplTest {
+import com.imas.test.utils.IMASTestCase;
+
+public class CommonDaoImplTest extends IMASTestCase {
 
     @Test
     public void testGetTypes() {
-        fail("Not yet implemented");
+        assertTrue(commonDao.getTypes().size() > 2);
     }
 
     @Test
     public void testGetHeatingTypes() {
-        fail("Not yet implemented");
+        assertTrue(commonDao.getHeatingTypes().size() >= 4);
     }
 
     @Test
     public void testGetCategories() {
-        fail("Not yet implemented");
+        
     }
 
 }

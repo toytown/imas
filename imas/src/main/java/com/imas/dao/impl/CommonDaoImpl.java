@@ -9,6 +9,7 @@ import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.imas.dao.interfaces.CommonDao;
 import com.imas.model.Category;
@@ -16,6 +17,7 @@ import com.imas.model.CategoryType;
 import com.imas.model.HeatingType;
 import com.imas.model.PostalCode;
 
+@Repository
 public class CommonDaoImpl implements CommonDao {
 	
     private EntityManager entityManager;

@@ -10,9 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import org.springframework.orm.jpa.JpaTemplate;
 import org.springframework.orm.jpa.support.JpaDaoSupport;
+import org.springframework.stereotype.Repository;
 
 import com.imas.dao.interfaces.GenericDao;
 
+@Repository
 public class GenericDaoImpl<E, PK extends Serializable> extends JpaDaoSupport implements GenericDao<E, PK> {
 
     protected static final Logger logger = Logger.getLogger(GenericDaoImpl.class);

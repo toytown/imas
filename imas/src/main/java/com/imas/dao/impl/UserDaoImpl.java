@@ -4,9 +4,12 @@ import java.util.List;
 
 import javax.persistence.TypedQuery;
 
+import org.springframework.stereotype.Repository;
+
 import com.imas.dao.interfaces.UserDao;
 import com.imas.model.User;
 
+@Repository
 public class UserDaoImpl extends GenericDaoImpl<User, Long> implements UserDao {
 
     @Override

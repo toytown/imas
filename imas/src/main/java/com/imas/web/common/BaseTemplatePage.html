@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title wicket:id="title" />
+<link href="css/oas_new_style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="topbar">
+	<div>
+		<img src="images/logo.jpg" />
+	</div>
+	<div id="topMenu">
+		<ul>
+			<li><a href="#">Feedback</a></li>
+			<li> | &nbsp; <a href="#">Kontakt</a></li>
+			<li> | &nbsp; <a href="#" >SiteMap</a></li>
+		</ul>
+	</div>
+	<div id="topDynamicMenu">
+		<wicket:enclosure child="authenticatedMenu">
+			<div wicket:id="authenticatedMenu">
+				<ul>
+					<li><span wicket:id="loginName">login Name</span></li>
+					<li><a href="#" wicket:id="userDetailLink">My Account</a></li>
+					<li><a href="#" wicket:id="logoffLink">logoff</a></li>
+				</ul>
+			</div>
+		</wicket:enclosure>
+	</div>
+	</div>
+	<div id="wrapper">
+    	<div id="topnav">
+          <ul>
+              <li><a href="#" wicket:id="Suchen">Suchen</a></li>
+              <li><a href="#" wicket:id="Inserieren">Inserieren</a></li>
+              <li><a href="#">Finanzen</a></li>
+              <li><a href="#">Hausbau</a></li>
+              <li><a href="#">Um - &amp; Ausbau</a></li>
+              <li><a href="#">Umzug</a></li>
+              <li><a href="#">Einrichten</a></li>
+              <li><a href="#">Senioren</a></li>              
+          </ul>
+      	</div>
+      <div class="clear"></div>
+      <div id="maincontent">
+      	<wicket:child/>
+      </div>
+      <div class="clear"></div>	
+      <div class="footborder"></div>
+</div>
+</body>
+</html>

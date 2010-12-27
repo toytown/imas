@@ -1,5 +1,7 @@
 package com.imas.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -7,11 +9,9 @@ import javax.persistence.Id;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import com.imas.common.dao.interfaces.IDomainObject;
-
 @Entity(name = "GEODB_POSTAL_CODES")
 @Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
-public class PostalCode implements IDomainObject {
+public class PostalCode implements Serializable {
 
 	private static final long serialVersionUID = 5134686699216964632L;
 

@@ -2,6 +2,7 @@ package com.imas.model;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
@@ -16,14 +17,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import com.imas.common.dao.interfaces.IDomainObject;
-
 @Entity(name = "OAS_USER")
-public class Customer implements IDomainObject {
+public class User implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -3721902561262002897L;
 
 	@Id
@@ -213,7 +209,7 @@ public class Customer implements IDomainObject {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Customer other = (Customer) obj;
+		User other = (User) obj;
 		if (activationCode == null) {
 			if (other.activationCode != null)
 				return false;

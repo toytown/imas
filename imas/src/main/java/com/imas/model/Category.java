@@ -1,5 +1,6 @@
 package com.imas.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,15 +14,10 @@ import javax.persistence.OneToMany;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import com.imas.common.dao.interfaces.IDomainObject;
-
 @Entity(name = "OAS_APPARTMENT_CATEGORY")
 @Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
-public class Category implements IDomainObject {
+public class Category implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 6330792452715523916L;
 
 	@Id

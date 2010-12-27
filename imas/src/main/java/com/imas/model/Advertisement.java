@@ -1,5 +1,6 @@
 package com.imas.model;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,10 +18,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Version;
 
-import com.imas.common.dao.interfaces.IDomainObject;
-
 @Entity(name = "OAS_APPARTMENT_ADVERTISEMENT")
-public class Advertisement implements IDomainObject {
+public class Advertisement implements Serializable {
 
 	private static final long serialVersionUID = -553582825643017717L;
 
@@ -185,7 +184,7 @@ public class Advertisement implements IDomainObject {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_id")
-	private Customer customer;
+	private User customer;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "category_id")
@@ -578,11 +577,11 @@ public class Advertisement implements IDomainObject {
 		this.imageDir = imageDir;
 	}
 
-	public Customer getUser() {
+	public User getUser() {
 		return customer;
 	}
 
-	public void setUser(Customer realStateCustomer) {
+	public void setUser(User realStateCustomer) {
 		this.customer = realStateCustomer;
 	}
 

@@ -2,6 +2,8 @@ package com.imas.model;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,10 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import com.imas.common.dao.interfaces.IDomainObject;
-
 @Entity(name = "OAS_CONTACT_DETAILS")
-public class CustomerContactDetails implements IDomainObject {
+public class CustomerContactDetails implements Serializable {
 
 	private static final long serialVersionUID = 3623565387080941741L;
 
@@ -24,7 +24,7 @@ public class CustomerContactDetails implements IDomainObject {
 	
 	@ManyToOne(cascade=CascadeType.ALL)	
 	@JoinColumn(name="user_id")
-	private Customer customer;
+	private User customer;
 	
 	@Column(name = "email", length = 100)
 	private String email;
@@ -76,11 +76,11 @@ public class CustomerContactDetails implements IDomainObject {
 		this.id = contactId;
 	}
 
-	public Customer getUser() {
+	public User getUser() {
 		return customer;
 	}
 
-	public void setUser(Customer customer) {
+	public void setUser(User customer) {
 		this.customer = customer;
 	}
 

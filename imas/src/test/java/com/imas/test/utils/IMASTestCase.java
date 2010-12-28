@@ -1,26 +1,55 @@
 package com.imas.test.utils;
 
+import java.util.Date;
+
+import javax.annotation.Resource;
+
+import junit.framework.Assert;
+
+import org.junit.Ignore;
+import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
 import com.imas.dao.interfaces.CommonDao;
+import com.imas.dao.interfaces.UserDao;
+import com.imas.model.ContactDetails;
+import com.imas.model.User;
+import com.imas.web.main.AppConfig;
 
+@TransactionConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "/imasAppContextTest.xml" })
-@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = false)
+@ContextConfiguration(locations = { "classpath*:imasAppContext.xml" })
 public class IMASTestCase {
 
-    @Autowired
-    @Qualifier("commonDao")
+    @Resource
     protected CommonDao commonDao;
+
+    @Resource
+    protected UserDao userDao;
     
-    @Autowired
-    @Qualifier("jdbcTemplate")
-    protected SimpleJdbcTemplate jdbcTemplate;
+    @Resource
+    protected AppConfig appConfig;
     
+    @Ignore
+    @Test
+    public void test() {
+        Assert.assertEquals(true, true);
+    }
+    
+    protected User createTestUser(String username) {
+        ContactDetails userContactDetails = new ContactDetails();
+        userContactDetails.setStreet("test street");
+        userContactDetails.setHouseNumber("4");
+        userContactDetails.setEmail("ptuladhar@gmx.net");
+        
+        User user= new User();
+        user.setUserName(username);
+        user.setPassword(username);
+        user.setInsertTs(new Date());
+        user.getContactDetails().add(userContactDetails);
+        return userDao.save(user);
+    }
 }

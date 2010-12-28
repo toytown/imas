@@ -15,17 +15,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.NamedQueries;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.persistence.Version;
 
-@Entity(name = "OAS_APPARTMENT_ADVERTISEMENT")
+@Entity(name="Advertisement")
+@Table(name = "OAS_APPARTMENT_ADVERTISEMENT")
+
+@NamedQueries( {
+        @NamedQuery(name = "advertisement.findAdvertByZip", query = "from Advertisement a  where a.areaCode= :areaCode")
+})
 public class Advertisement implements Serializable {
 
 	private static final long serialVersionUID = -553582825643017717L;
-
-	public Advertisement() {
-		super();
-	}
 
 	@Id
 	@Column(name = "advert_id")
@@ -184,7 +188,7 @@ public class Advertisement implements Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_id")
-	private User customer;
+	private User user;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "category_id")
@@ -578,11 +582,11 @@ public class Advertisement implements Serializable {
 	}
 
 	public User getUser() {
-		return customer;
+		return user;
 	}
 
-	public void setUser(User realStateCustomer) {
-		this.customer = realStateCustomer;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public Category getCategory() {
@@ -673,7 +677,7 @@ public class Advertisement implements Serializable {
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		result = prime * result + ((updateDate == null) ? 0 : updateDate.hashCode());
 		result = prime * result + ((updatedBy == null) ? 0 : updatedBy.hashCode());
-		result = prime * result + ((customer == null) ? 0 : customer.hashCode());
+		result = prime * result + ((user == null) ? 0 : user.hashCode());
 		return result;
 	}
 
@@ -946,10 +950,10 @@ public class Advertisement implements Serializable {
 				return false;
 		} else if (!updatedBy.equals(other.updatedBy))
 			return false;
-		if (customer == null) {
-			if (other.customer != null)
+		if (user == null) {
+			if (other.user != null)
 				return false;
-		} else if (!customer.equals(other.customer))
+		} else if (!user.equals(other.user))
 			return false;
 		return true;
 	}

@@ -5,12 +5,10 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-
-@Entity(name = "GEODB_POSTAL_CODES")
-@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
+@Entity(name="PostalCode")
+@Table(name = "GEODB_POSTAL_CODES")
 public class PostalCode implements Serializable {
 
 	private static final long serialVersionUID = 5134686699216964632L;

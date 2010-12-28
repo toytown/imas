@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.imas.model.Advertisement;
 import com.imas.model.Images;
-import com.imas.valueobjects.SearchRequest;
+import com.imas.valueobjects.AdvertisementSearchFilter;
 
 public interface AdvertisementService {
 
@@ -12,17 +12,14 @@ public interface AdvertisementService {
 	
 	public Advertisement findById(Long id);
 	
-	public List<String> findCities(String searchStr);	
-	
 	public Advertisement update(Advertisement appartment);
 	
 	public void delete(Advertisement advert);
 	
-	public List<Advertisement> findRealStatetByZip(String zip);
+	public List<Advertisement> findAdvertByZip(String zip);
 	
-	public List<Advertisement> findAdvertisement(SearchRequest searchRequest);
+	public List<Advertisement> findAdvertisement(AdvertisementSearchFilter searchRequest);
 	
 	public Images findRealStateImageById(long id);
-	
-	public void deleteImage(Images appartmentImage);
+
 }

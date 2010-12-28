@@ -1,4 +1,4 @@
-package com.imas.dao.impl;
+package com.imas.dao.utils;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,6 +14,8 @@ import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+
+import com.imas.valueobjects.SearchFilter;
 
 public class CriteriaUtil {
     

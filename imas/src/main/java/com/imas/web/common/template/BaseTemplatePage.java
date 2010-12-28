@@ -1,10 +1,9 @@
-package com.imas.web.common;
+package com.imas.web.common.template;
 
 import org.apache.wicket.Session;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.link.Link;
 
 import com.imas.web.main.IMASSession;
@@ -33,8 +32,10 @@ public class BaseTemplatePage extends WebPage {
 		authenticatedMenu.add(new Label("loginName", "test"));
 		//authenticatedMenu.add(new BookmarkablePageLink("userDetailLink", UserPage.class));
 		
-		authenticatedMenu.add(new Link("logoffLink") {
-			public void onClick() {
+		authenticatedMenu.add(new Link<String>("logoffLink") {
+            private static final long serialVersionUID = 1L;
+
+            public void onClick() {
 			    IMASSession session = (IMASSession) Session.get();
 				session.invalidate();				
 				setResponsePage(MainPage.class);

@@ -7,8 +7,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.imas.dao.interfaces.CommonDao;
@@ -19,20 +17,14 @@ import com.imas.model.PostalCode;
 
 @Repository("commonDao")
 public class CommonDaoImpl implements CommonDao {
-	
+
+    @PersistenceContext
     private EntityManager entityManager;
 
-    @Autowired
-    protected SimpleJdbcTemplate jdbcTemplate;
-    
-    @PersistenceContext(name = "imasPU")
-    public void setEntityManager(EntityManager entityManager) {
-        this.entityManager = entityManager;
-    }
-    
+
 	public List<CategoryType> getTypes() {
-        TypedQuery<CategoryType> q = entityManager.createQuery("select t from CategoryType t", CategoryType.class);
-        return q.getResultList();		
+        TypedQuery<CategoryType> q = entityManager.createQuery("from CategoryType as c", CategoryType.class);
+        return q.getResultList();
 	}
 
 	public List<HeatingType> getHeatingTypes() {

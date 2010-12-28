@@ -1,8 +1,12 @@
 package com.imas.valueobjects;
 
-public class ContactRequest {
+import java.io.Serializable;
 
-	private String firstName;
+public class ContactRequest implements Serializable{
+
+    private static final long serialVersionUID = 1L;
+    
+    private String firstName;
 	private String lastName;
 	private String phone;
 	private String email;

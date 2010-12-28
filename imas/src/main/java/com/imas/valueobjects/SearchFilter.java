@@ -1,4 +1,4 @@
-package com.imas.dao.impl;
+package com.imas.valueobjects;
 
 import java.io.Serializable;
 

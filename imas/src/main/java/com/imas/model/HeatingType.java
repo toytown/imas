@@ -7,12 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-
-@Entity(name = "OAS_HEATING_TYPES")
-@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
+@Entity(name="HeatingType")
+@Table(name = "OAS_HEATING_TYPES")
 public class HeatingType implements Serializable{
 
 	private static final long serialVersionUID = 3346949578228859950L;

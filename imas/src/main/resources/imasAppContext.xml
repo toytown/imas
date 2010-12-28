@@ -15,11 +15,6 @@
   http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
 
 
-	<!-- The configuration changes compared to applicationcontext.xml is mainly 
-		to obtain data sources locally so that the tests can be run outside a J2EE 
-		container -->
-	<context:load-time-weaver />
-
 	<!-- Stereo types are recognized -->
 	<context:annotation-config />
 
@@ -42,8 +37,8 @@
   	
 	
 	
-	<bean id="appProperties" class="com.wirecard.ib.web">
-		<property name="imageStore" ref="${imagestore.location}" />
+	<bean id="appProperties" class="com.imas.web.main.AppConfig">
+		<property name="imageStore" value="${imagestore.location}" />
 	</bean>
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
@@ -102,7 +97,6 @@
 		<property name="databasePlatform" value="org.hibernate.dialect.MySQLDialect" />
 		<property name="generateDdl" value="true" />
 		<property name="showSql" value="true" />
-		<property name="auto-import" value="true" />
 	</bean>
 
 </beans>

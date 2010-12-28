@@ -11,8 +11,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-@Entity(name = "OAS_CONTACT_DETAILS")
+@Entity(name="ContactDetails")
+@Table(name = "OAS_CONTACT_DETAILS")
 public class ContactDetails implements Serializable {
 
 	private static final long serialVersionUID = 3623565387080941741L;
@@ -24,7 +26,7 @@ public class ContactDetails implements Serializable {
 	
 	@ManyToOne(cascade=CascadeType.ALL)	
 	@JoinColumn(name="user_id")
-	private User customer;
+	private User user;
 	
 	@Column(name = "email", length = 100)
 	private String email;
@@ -77,11 +79,11 @@ public class ContactDetails implements Serializable {
 	}
 
 	public User getUser() {
-		return customer;
+		return user;
 	}
 
 	public void setUser(User customer) {
-		this.customer = customer;
+		this.user = customer;
 	}
 
 	public String getEmail() {
@@ -205,7 +207,7 @@ public class ContactDetails implements Serializable {
 		result = prime * result + ((phone1 == null) ? 0 : phone1.hashCode());
 		result = prime * result + ((phone2 == null) ? 0 : phone2.hashCode());
 		result = prime * result + ((street == null) ? 0 : street.hashCode());
-		result = prime * result + ((customer == null) ? 0 : customer.hashCode());
+		result = prime * result + ((user == null) ? 0 : user.hashCode());
 		result = prime * result + ((zip == null) ? 0 : zip.hashCode());
 		return result;
 	}
@@ -284,10 +286,10 @@ public class ContactDetails implements Serializable {
 				return false;
 		} else if (!street.equals(other.street))
 			return false;
-		if (customer == null) {
-			if (other.customer != null)
+		if (user == null) {
+			if (other.user != null)
 				return false;
-		} else if (!customer.equals(other.customer))
+		} else if (!user.equals(other.user))
 			return false;
 		if (zip == null) {
 			if (other.zip != null)

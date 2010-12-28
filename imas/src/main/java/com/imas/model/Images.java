@@ -9,8 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-@Entity(name = "OAS_APPARTMENT_IMAGES")
+@Entity(name="Images")
+@Table(name = "OAS_APPARTMENT_IMAGES")
 public class Images implements Serializable {
 
 	private static final long serialVersionUID = 385699473568795335L;

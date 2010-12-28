@@ -3,7 +3,10 @@ package com.imas.valueobjects;
 import java.io.Serializable;
 
 public class SortingType implements Serializable {
-	public String getDescription() {
+
+    private static final long serialVersionUID = 1L;
+
+    public String getDescription() {
 		return description;
 	}
 	public void setDescription(String description) {

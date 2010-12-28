@@ -10,12 +10,10 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-
-@Entity(name = "OAS_APPARTMENT_CATEGORY")
-@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
+@Entity(name="Category")
+@Table(name = "OAS_APPARTMENT_CATEGORY")
 public class Category implements Serializable {
 
 	private static final long serialVersionUID = 6330792452715523916L;

@@ -6,10 +6,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
-import org.springframework.orm.jpa.JpaTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.imas.dao.interfaces.GenericDao;
@@ -20,13 +16,6 @@ public class GenericDaoImpl<E, PK extends Serializable> implements GenericDao<E,
     protected static final Logger logger = Logger.getLogger(GenericDaoImpl.class);
     
     protected EntityManager entityManager;
-    
-    @Autowired
-    @Qualifier("jdbcTemplate")
-    protected SimpleJdbcTemplate jdbcTemplate;
-    
-    @Autowired
-    protected JpaTemplate jpaTemplate;
 
     private Class<E> entityClass;
 

@@ -14,7 +14,7 @@ import com.imas.dao.interfaces.AdvertisementDao;
 import com.imas.model.Advertisement;
 import com.imas.model.Images;
 import com.imas.services.interfaces.AdvertisementService;
-import com.imas.valueobjects.SearchRequest;
+import com.imas.valueobjects.AdvertisementSearchFilter;
 import com.imas.web.main.AppConfig;
 
 @Service("advertisementService")
@@ -28,38 +28,29 @@ public class AdvertisementServiceImpl implements AdvertisementService {
     
 	private Logger logger = Logger.getLogger(AdvertisementServiceImpl.class);
 	
-
-	public List<Advertisement> findAdvertisement(SearchRequest searchRequest) {
-		return advertisementDao.findRealStateBySearchCriteria(searchRequest);
+	@Override
+	public List<Advertisement> findAdvertisement(AdvertisementSearchFilter searchRequest) {
+		return advertisementDao.findAdvertBySearchCriteria(searchRequest);
 	}
 
-	public List<Advertisement> findRealStatetByZip(String zip) {
-		return advertisementDao.findAllAppartments(zip, zip);
-	}
-
-	public Advertisement findById(Long appartmentId) {
-		return advertisementDao.findRealStateAdvertById(appartmentId);
-	}
-
+	@Override
 	@Transactional
 	public void save(Advertisement appartment) {
 		advertisementDao.save(appartment);
 	}
 
+	@Override
 	@Transactional
 	public Advertisement update(Advertisement appartment) {
 		return advertisementDao.update(appartment);
 	}
 
-	@Transactional
-	public void deleteImage(Images appartmentImage) {
-		advertisementDao.deleteImage(appartmentImage);
-	}
-
+	@Override
 	public Images findRealStateImageById(long id) {
 		return advertisementDao.findImageById(1);
 	}
 
+	@Override
 	@Transactional
 	public void delete(Advertisement advert) {
 		advertisementDao.delete(advert);
@@ -95,7 +86,14 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 		}
 	}
 
-	public List<String> findCities(String searchStr) {
-		return advertisementDao.findCities(searchStr);
-	}
+    @Override
+    public Advertisement findById(Long id) {
+        return advertisementDao.findById(id);
+    }
+
+    @Override
+    public List<Advertisement> findAdvertByZip(String zip) {
+        return null;
+    }
+
 }

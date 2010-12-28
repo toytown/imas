@@ -2,53 +2,86 @@ package com.imas.dao.impl;
 
 import java.util.List;
 
-import javax.persistence.NamedQuery;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 import org.springframework.stereotype.Repository;
 
 import com.imas.dao.interfaces.AdvertisementDao;
+import com.imas.dao.utils.CriteriaUtil;
 import com.imas.model.Advertisement;
 import com.imas.model.Images;
-import com.imas.valueobjects.SearchRequest;
+import com.imas.valueobjects.AdvertisementSearchFilter;
 
 @Repository("advertisementDao")
-@NamedQuery(name = "findCity", query = "select p from com.oas.model.PostalCode p")
 public class AdvertisementDaoImpl extends GenericDaoImpl<Advertisement, Long> implements AdvertisementDao {
 
-    @Override
-    public Advertisement findRealStateAdvertById(Long appartmentId) {
-        // TODO Auto-generated method stub
-        return null;
-    }
 
     @Override
-    public List<Advertisement> findAllAppartments(String zipCode, String city) {
-        // TODO Auto-generated method stub
-        return null;
+    public List<Advertisement> findAdvertBySearchCriteria(AdvertisementSearchFilter searchRequest) {
+        logger.info("Performing price list search ..." + searchRequest.toString());
+        
+        CriteriaBuilder cBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Advertisement> criteriaQuery = cBuilder.createQuery(Advertisement.class);
+        Root<Advertisement> invoice = criteriaQuery.from(Advertisement.class);
+        criteriaQuery.select(invoice);
+        
+        TypedQuery<Advertisement> q = buildCriteriaQuery(searchRequest, cBuilder, invoice, criteriaQuery);
+        
+        CriteriaUtil.setPagination(q, searchRequest);
+
+        
+        return q.getResultList();
     }
 
-    @Override
-    public List<String> findCities(String searchStr) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    private <T> TypedQuery<T> buildCriteriaQuery(AdvertisementSearchFilter filter, CriteriaBuilder cBuilder, Root<Advertisement> advert, CriteriaQuery<T> criteriaQuery) {
 
-    @Override
-    public List<Advertisement> findRealStateBySearchCriteria(SearchRequest searchRequest) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+        CriteriaUtil criteria = new CriteriaUtil(cBuilder);
+        
+        if(filter.getCity() != null) {
+            criteria.equal(filter.getCity(), "city", advert);
+        } 
+        
+        if (filter.getRoomsFrom() != null) {
+            criteria.greaterThanOrEqualTo(filter.getRoomsFrom(), "totalRooms", advert);
+        }
+        
+        if (filter.getRoomsTo() != null) {
+            criteria.lessThanOrEqualTo(filter.getRoomsTo(), "totalRooms", advert);
+        }
+        
+        if (filter.getSizeFrom() != null) {
+            criteria.greaterThanOrEqualTo(filter.getSizeFrom(), "size", advert);
+        }
+        
+        if (filter.getSizeTo() != null) {
+            criteria.lessThanOrEqualTo(filter.getSizeTo(), "size", advert);
+        }
+        
+        if (filter.getCostFrom() != null) {
+            criteria.greaterThanOrEqualTo(filter.getRoomsFrom(), "cost", advert);
+        }
+        
+        if (filter.getCostTo() != null) {
+            criteria.lessThanOrEqualTo(filter.getRoomsTo(), "cost", advert);
+        }
+        
+        if (filter.getUserName() != null) {
+            criteria.equal(filter.getUserName(), "user", advert);
+        }
+
+        if (!filter.getAppartmentTypes().isEmpty()) {            
+            criteria.in("categoryType", filter.getAppartmentTypes(), advert);
+        }
+        
+        return criteria.createQuery(entityManager, criteriaQuery);
+    }    
 
     @Override
     public Images findImageById(long id) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public void deleteImage(Images appartmentImage) {
-        // TODO Auto-generated method stub
-        
+        return entityManager.find(Images.class, id);
     }
 
     /*

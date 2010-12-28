@@ -16,8 +16,10 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
-@Entity(name = "OAS_USER")
+@Entity(name="User")
+@Table(name = "OAS_USER")
 public class User implements Serializable {
 
 	private static final long serialVersionUID = -3721902561262002897L;
@@ -57,11 +59,11 @@ public class User implements Serializable {
 	@Column(name = "insert_date")
 	private Date insertTs;
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="customer")
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="user")
 	private Set<Advertisement> advertisement =  new HashSet<Advertisement>(0);	
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "customer")
-	private List<ContactDetails> customerContactDetails =  new ArrayList<ContactDetails>(0);	
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
+	private List<ContactDetails> contactDetails =  new ArrayList<ContactDetails>(0);	
 	
 	@Column(name = "activation_code", length = 64)
 	private String activationCode;
@@ -157,11 +159,11 @@ public class User implements Serializable {
 	}
 
 	public List<ContactDetails> getContactDetails() {
-		return customerContactDetails;
+		return contactDetails;
 	}
 
 	public void setContactDetails(List<ContactDetails> customerContactDetails) {
-		this.customerContactDetails = customerContactDetails;
+		this.contactDetails = customerContactDetails;
 	}
 
 	public Date getInsertTs() {
@@ -187,7 +189,7 @@ public class User implements Serializable {
 		result = prime * result + ((activationCode == null) ? 0 : activationCode.hashCode());
 		result = prime * result + ((advertisement == null) ? 0 : advertisement.hashCode());
 		result = prime * result + ((companyName == null) ? 0 : companyName.hashCode());
-		result = prime * result + ((customerContactDetails == null) ? 0 : customerContactDetails.hashCode());
+		result = prime * result + ((contactDetails == null) ? 0 : contactDetails.hashCode());
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((insertTs == null) ? 0 : insertTs.hashCode());
@@ -225,10 +227,10 @@ public class User implements Serializable {
 				return false;
 		} else if (!companyName.equals(other.companyName))
 			return false;
-		if (customerContactDetails == null) {
-			if (other.customerContactDetails != null)
+		if (contactDetails == null) {
+			if (other.contactDetails != null)
 				return false;
-		} else if (!customerContactDetails.equals(other.customerContactDetails))
+		} else if (!contactDetails.equals(other.contactDetails))
 			return false;
 		if (firstName == null) {
 			if (other.firstName != null)

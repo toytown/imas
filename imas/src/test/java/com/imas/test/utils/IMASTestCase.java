@@ -13,11 +13,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
+import com.imas.common.AppConfig;
 import com.imas.dao.interfaces.CommonDao;
 import com.imas.dao.interfaces.UserDao;
 import com.imas.model.ContactDetails;
 import com.imas.model.User;
-import com.imas.web.main.AppConfig;
 
 @TransactionConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)

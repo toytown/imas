@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+*html{height:100%}
+body{
+	background:url(../images/body_bg.jpg) repeat-x top;
+	margin:0px;
+	padding:0px;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	}
+
+div h1 {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+
+div h3 {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}

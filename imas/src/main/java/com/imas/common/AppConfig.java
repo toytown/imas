@@ -1,4 +1,4 @@
-package com.imas.web.main;
+package com.imas.common;
 
 
 public class AppConfig {

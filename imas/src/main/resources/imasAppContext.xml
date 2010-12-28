@@ -37,7 +37,7 @@
   	
 	
 	
-	<bean id="appProperties" class="com.imas.web.main.AppConfig">
+	<bean id="appProperties" class="com.imas.common.AppConfig">
 		<property name="imageStore" value="${imagestore.location}" />
 	</bean>
 

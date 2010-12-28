@@ -10,12 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.imas.common.AppConfig;
 import com.imas.dao.interfaces.AdvertisementDao;
 import com.imas.model.Advertisement;
 import com.imas.model.Images;
 import com.imas.services.interfaces.AdvertisementService;
 import com.imas.valueobjects.AdvertisementSearchFilter;
-import com.imas.web.main.AppConfig;
 
 @Service("advertisementService")
 public class AdvertisementServiceImpl implements AdvertisementService {

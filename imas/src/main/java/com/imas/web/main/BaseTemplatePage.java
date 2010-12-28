@@ -4,7 +4,6 @@ import org.apache.wicket.ResourceReference;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.form.AjaxFormComponentUpdatingBehavior;
 import org.apache.wicket.markup.html.WebMarkupContainer;
-import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.CheckBox;
 import org.apache.wicket.markup.html.image.Image;
 import org.apache.wicket.model.Model;
@@ -12,17 +11,20 @@ import org.odlabs.wiquery.ui.tabs.Tabs;
 
 
 
-public class MainPage extends WebPage {
 
+public class BaseTemplatePage extends AbstractWepTemplatePage {
+
+ // Wicket components
     private CheckBox enableTabTwo;
     private CheckBox enableTabSix;
     private Tabs tabs;
     private WebMarkupContainer hiddenTab6;
-    
-	public MainPage() {
-		super();
 
-		tabs = new Tabs("tabs");
+    
+	public BaseTemplatePage() {
+		
+
+        tabs = new Tabs("tabs");
         add(tabs);
         
         hiddenTab6 = new WebMarkupContainer("hiddenTab6");
@@ -76,8 +78,12 @@ public class MainPage extends WebPage {
             }
         });
         add(enableTabSix);
-		
+
+
+	    
 	}
 	
-
+	public String getTitle() {
+		return "";
+	}
 }

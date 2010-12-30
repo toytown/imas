@@ -6,11 +6,10 @@ import java.util.List;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.ajax.markup.html.form.AjaxButton;
-import org.apache.wicket.markup.html.CSSPackageResource;
 import org.apache.wicket.markup.html.JavascriptPackageResource;
 import org.apache.wicket.markup.html.WebMarkupContainer;
-import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Button;
+import org.apache.wicket.markup.html.form.CheckBox;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.Model;
@@ -28,16 +27,14 @@ import org.odlabs.wiquery.ui.dialog.Dialog;
 import org.odlabs.wiquery.ui.tabs.Tabs;
 import org.odlabs.wiquery.ui.themes.ThemeUiHelper;
 
-public class MainPage extends WebPage {
+public class MainPage extends AbstractWepTemplatePage {
 
 
     // Wicket components
     private Tabs tabs;
     
     protected void addHeaderContributors() {
-        add(JavascriptPackageResource.getHeaderContribution("js/jquery.uniform.js"));
-        add(CSSPackageResource.getHeaderContribution("css/uniform.default.css"));
-        add(JavascriptPackageResource.getHeaderContribution("js/main.js"));
+        add(JavascriptPackageResource.getHeaderContribution("./js/main.js"));
     }
     
 	public MainPage() {
@@ -84,6 +81,10 @@ public class MainPage extends WebPage {
         //Text Box
         TextField<String> textFieldLong = new TextField<String>("textFieldLong");
         formButtons.add(textFieldLong);
+        
+        CheckBox chkBox = new CheckBox("married");
+        formButtons.add(chkBox);
+        formButtons.add(new Button("wiButton").add(new ButtonBehavior().setLabel("submit")));
         
         // Behavior button
         AjaxLink<String> wicketLink = new AjaxLink<String> ("wicketLink") {

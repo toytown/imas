@@ -77,20 +77,34 @@
 			<!--  FORM  -->
 			<br />
 				<form wicket:id="formButtons">
-					<table style="height: 100%; width: 100%;">				
-						<tbody>
-							<tr>
-								<td>Text field</td>
-								<td><input type="text" wicket:id="textFieldLong" class="text"/></td>
-							</tr>
-							<tr>
-								<td>Checkbox field</td>
-								<td><div class="checker"><span><input type="checker"/></span></div></td>
-							</tr>							
-														
-						</tbody>
-					</table>
-										
+					<div class="first_column search_form rounded-bottom">
+						<p>
+							<label class="label">Name</label>
+							<input type="text" wicket:id="textFieldLong" class="inputtext"/>
+						</p>
+						<p>
+							<label class="label">Married</label>
+							<input type="checkbox" wicket:id="married"/>
+						</p>						
+						<p>
+							<label class="label">Country</label>
+							<select id="source">
+							    <option selected="selected" value="BR">Brasil</option>
+							    <option value="FR">France</option>
+							    <option value="DE">Germany</option>
+							    <option value="IN">India</option>
+							    <option value="JP">Japan</option>
+							    <option value="RS">Serbia</option>
+							    <option value="UK">United Kingdom</option>
+							    <option value="US">United States</option>
+							</select>
+						
+						</p>
+						<p>
+							<button wicket:id="wiButton">[A button element]</button>
+						</p>
+					</div>
+
 					<table style="height: 100%; width: 100%;">				
 						<tbody>
 							<tr>

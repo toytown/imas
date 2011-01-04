@@ -1,0 +1,127 @@
+/* WIRECARD AG */
+/* -----------------------------------------------------
+[Screen Areas Stylesheet]
+Project:		Wirecard Enterprise Portal
+Version:		1.0
+Last Change:	15.10.2008
+----------------------------------------------------- */
+
+div#viewport {
+    width: 90%;
+    min-width: 930px;
+    text-align: left;
+    margin: auto;
+}
+div#login_time {
+	padding: 0;
+	margin: 0;   
+}
+div#login_time span#server_clock {
+    padding: 0;
+    float: right;
+    width: 120px;
+    color: #fff;
+}
+div#login_time span#server_clock span#server_time {
+    width: 20px;
+}
+div#header {
+    clear: both;
+    padding: 0 12px; 
+}
+    div#header p.user_navi {
+        float: right;
+        font-weight: bold;
+        margin: 25px 0 17px 0;
+    }
+    div#header img#logo {
+        margin: 14px 0 20px 0;
+        float: left;
+    }
+div#content {
+    padding: 0 12px;
+}
+div#login_time {
+    color: #fff;
+    width: 100%;
+    background-color: #99BCE2;
+    height: 20px;
+}
+    div#login_time.dev {
+        background-color: #708090;
+    }
+    
+    div#login_time.int {
+        background-color: #8B4513;
+    }
+    
+    div#login_time.qa {
+        background-color: #79B00C;
+    }
+    
+    div#login_time.test {
+        background-color: #FF9900;
+    }
+    
+	div#login_time span {
+		display: block;
+	    float: left;
+	    padding-top: 2px;
+	    width: auto;
+	    margin-left: 12px;
+	    font-size: 9px;
+	}
+	div#login_time #refresh_bar_border {
+	    margin: 7px 5px 5px 5px;
+	    vertical-align: middle;
+	    width: 92px;
+	    height: 5px;
+	    background: transparent url( ../img/refresh_bar_border.gif ) top left no-repeat;
+	    float: left;
+	    padding: 1px;
+	}
+	div#login_time #refresh_bar_img {
+	    background: transparent url( ../img/refresh_bar.gif ) top left repeat-x;
+	    width: 90px;
+	    height: 3px;
+	}
+
+/* Footer */
+div#footer {
+    font-size: 9px;
+    color: #999999;
+    border-top: 1px solid #999999;
+    text-align: right;
+    padding-bottom: 20px;
+}
+div#footer_margin {
+    height: 112px;
+    background-color: transparent;
+}
+div#welcome {
+    margin-top: 18px;
+    background: transparent;
+    height: 130px;
+}
+div#welcome-image, div#welcome-image img {
+    position: absolute;
+    width: 900px;
+    height: 130px;
+    margin: 0;
+    border: 0;
+    background-image: url('../img/welcome_logo.jpg');
+    background-repeat: no-repeat;
+}
+div#welcome-phrase {
+    position: absolute;
+    font-size: 21px;
+    line-height: 21px;
+    padding-top: 40px;
+    margin-left: 50px;    
+    color: #205F87;
+}
+/* Corner fix */
+.jquery-corner {
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,136 @@
+/* WIRECARD AG */
+/* -----------------------------------------------------
+[Gadgets Stylesheet]
+Project:		Wirecard Enterprise Portal
+Version:		1.0
+Last Change:	15.10.2008
+----------------------------------------------------- */
+
+div.gadgets {
+    clear: both;
+    width: 950px;
+    padding-top: 20px;
+}
+	div.gadgets ul {
+	    list-style-type: none;
+	    float: left;
+	    display: block;
+	    width: 32%;
+	    margin-left: 0px;
+	}
+		div.gadgets ul li {
+		    margin-right: auto;
+		    margin-bottom: 6px;
+		    height: 21px;
+		    overflow: hidden;
+		    background: transparent url( ../img/panel_grey_gradient_left.gif ) repeat-x;
+		    width: 98%;
+		}
+			div.gadgets ul li span.gradient_start {
+			    background: url( ../img/panel_grey_gradient_left_be.gif ) no-repeat left top;
+			    float: left;
+			    height: 18px;
+			    width: auto;
+			    padding-top: 3px;
+			    padding-left: 8px;
+			}
+			div.gadgets ul li#change_timeout {
+			    padding-left: 13px;
+			    margin-right: 0;
+			    background: transparent url( ../img/arrow_right_black.gif ) no-repeat 3px 4px;
+			}
+			div.gadgets ul li.expanded {
+			    height: auto;
+			}
+			div.gadgets ul li a.label {
+			    line-height: 21px;
+			    vertical-align: middle;
+			    color: #333333;
+			    text-decoration: none;
+			}
+			div.gadgets ul li a.plus,
+			div.gadgets ul li a.minus {
+				background: transparent;
+				float: left;
+				width: 298px;
+				height: 21px;
+				color: #333333;
+				font-size: 12px;
+				text-decoration: none;
+				cursor: pointer;
+				vertical-align: middle;
+				line-height: 21px;
+			}
+			div.gadgets ul li a.plus {
+			    background: transparent url( ../img/panel_grey_gradient_right_left.gif ) no-repeat right top;
+			}
+			div.gadgets ul li a.minus {
+			    background: transparent url( ../img/panel_grey_gradient_right_down.gif ) no-repeat right top;
+			}
+				div.gadgets ul li ul {
+				    clear: both;
+				    margin: 0 3px 0 3px;
+				    width: 100%;
+				}
+					div.gadgets ul li.expanded ul li {
+					    width: 94%;
+					    height: auto;
+					    line-height: 17px;
+					    background: #FFFFFF;
+					    border-left: 1px solid #BDBDBD;
+					    border-right: 1px solid #BDBDBD;
+					    border-bottom: 1px solid #BDBDBD;
+					    padding: 3px 5px 4px 5px;
+					    margin-bottom: 0px !important;
+					}
+					* html div.gadgets ul li.expanded ul li {
+					    margin-bottom: 2px !important;
+					}
+					div.gadgets ul li ul li {
+					    clear: both;
+					    float: none;
+					}
+					* html div.gadgets ul li.expanded ul li.first {
+					    margin-top: 0px !important;
+					}
+					div.gadgets ul li ul li select {
+					    width: 100%;
+					    margin-top: 3px;
+					}
+					div.gadgets ul li ul li select option {
+						padding-right: 10px;
+					}
+					div.gadgets ul li ul li span {
+					    display: block;
+					    float: none;
+					}
+					div.gadgets ul li ul li span.label_grey {
+					    color: #999999;
+					}
+					div.gadgets ul li ul li span.label_green {
+					    color: #679801;
+					}
+					div.gadgets ul li ul li span.label_blue {
+					    color: #5994C0;
+					}
+					div.gadgets ul li ul li span.label_yellow {
+					    color: #FC9802;
+					}
+					div.gadgets ul li ul li span.column {
+					    float: left;
+					    width: 103px;
+					}
+					div.gadgets ul li.expanded ul li a {
+					    float: none;
+					    display: block;
+					    text-decoration: none;
+					    background: transparent;
+					    background-color: #FFFFFF;
+					    color: #333333;
+					}
+					div.gadgets ul li ul li img {
+					    float: right;
+					    border: none;
+					    margin-top: 3px;
+					    margin-right: 3px;
+					}

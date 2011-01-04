@@ -1,0 +1,157 @@
+/* WIRECARD AG */
+/* -----------------------------------------------------
+[Messages Stylesheet]
+Project:		Wirecard Enterprise Portal
+Version:		1.0
+Last Change:	15.10.2008
+----------------------------------------------------- */
+
+div.bubble {
+	width: 90%;
+	padding: 3px 0 3px 0;
+	color: #fff;
+	display: none;
+	margin: 0 auto;
+}
+div.bubble-top {
+	width: 400px;
+	padding: 3px 0 3px 0;
+	color: #fff;
+	display: none;
+	margin: 0;
+}
+div.bubble h2, div.bubble-top h2, p {
+	margin: 5px 10px;
+	color: #fff;
+	padding: 0px;
+}
+div.error, div.error p {
+	background-color: #e30f0e;
+	color: #fff;
+}
+div.warning, div.warning p {
+    background-color: #ff8c00;
+    color: #fff;
+}
+div.error p {
+	border-top: 0;
+	margin-left: 10px;
+	max-height: 400px;
+    overflow: auto;
+}
+div.warning p {
+    border-top: 0;
+    margin-left: 10px;
+}
+div.failure, div.failure p {
+	background-color: #e30f0e;
+	color: #fff;
+}
+div.success, div.success p {
+	background-color: #79b00c;
+	color: #fff;
+}
+div.info {
+	background-color: #c6dbee;
+}
+div.info p {
+    border-top: 0;
+    margin-left: 10px;
+}
+div.help {
+	background-color: #feff99;
+}
+div.help p {
+	border-top: 0;
+	margin-left: 10px;
+}
+div.help img.close {
+	float:right;
+	margin: 3px 5px 0 0;
+	cursor: pointer;
+}
+div.grey h2, p {
+	color: #333;
+}
+
+/* Info Boxes */
+.success_box {
+	width: 430px;
+	background: #c8dc9d;
+	margin: 0 0 2px 3px;
+	font-size: 12px;
+	padding: 10px;
+	line-height: 24px;
+}
+	.success_box p {
+		color: #333;
+	}
+	.success_box label {
+		color: #666;
+		float: left;
+        width: 150px;
+	}
+	.success_box h2 {
+		color: #333;
+		margin-top: 0;
+		margin-bottom: 4px;
+		padding: 5px 5px;
+	}
+	.success_box ol, ul {
+		margin-left: 40px;
+	}
+	.success_box img {
+		float: left;
+		margin-left: -35px;
+	}
+	.success_box li {
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+	.success_box .separator {
+		background: #e8e8e8 url(../img/line_dotted_grey.gif) repeat-x left top;
+		line-height: 1px;
+		height: 1px;
+		margin: 10px 5px;
+	}
+
+/* Info Boxes */
+.failure_box {
+	width: 430px;
+	background: #fbcfd0;
+	margin: 0 0 2px 3px;
+	font-size: 12px;
+	padding: 10px;
+	line-height: 24px;
+}
+	.failure_box p {
+		color: #333;
+	}
+	.failure_box label {
+		color: #666;
+		float: left;
+        width: 150px;
+	}
+	.failure_box h2 {
+		color: #333;
+		margin-top: 0;
+		margin-bottom: 4px;
+		padding: 5px 5px;
+	}
+	.failure_box ol, ul {
+		margin-left: 40px;
+	}
+	.failure_box img {
+		float: left;
+		margin-left: -35px;
+	}
+	.failure_box li {
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+	.failure_box .separator {
+		background: #e8e8e8 url(../img/line_dotted_grey.gif) repeat-x left top;
+		line-height: 1px;
+		height: 1px;
+		margin: 10px 5px;
+	}

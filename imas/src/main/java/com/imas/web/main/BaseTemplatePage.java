@@ -12,7 +12,7 @@ import org.odlabs.wiquery.ui.tabs.Tabs;
 
 
 
-public class BaseTemplatePage extends AbstractWepTemplatePage {
+public class BaseTemplatePage extends IMASWebTemplatePage {
 
  // Wicket components
     private CheckBox enableTabTwo;

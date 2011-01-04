@@ -1,0 +1,54 @@
+<wicket:panel>
+  <table cellspacing="0" cellpadding="0" id="searchablePaletteTable">
+   <form wicket:id="searchForm" name="searchForm" id="searchForm">
+    <tr>
+        <td><label for="searchString"><wicket:message key="lbl_searchStr">[Search]</wicket:message></label></td>
+        <td>&nbsp;</td>
+        <td><label for="searchOption"><wicket:message key="lbl_searchBy">[Search by]</wicket:message></label></td>
+    </tr>    
+    <tr>
+        <td>
+            <span wicket:id="searchString.error"></span>
+            <input type="text" name="searchString" id="searchString" wicket:id="searchString" style="width: 125px"/><a wicket:id="searchButton">[Search]</a>
+            <script type="text/javascript">
+                function handleEnter(e) {
+                    if (e.keyCode == 13) {
+                        e.preventDefault();
+                        jQuery('#searchButton').trigger('click');
+                        return false;
+                    } 
+                }
+                jQuery('#searchString').keyup(handleEnter).keypress(handleEnter);
+            </script>
+        </td>
+        <td>&nbsp;</td>
+        <td>
+            <select name="searchOption" wicket:id="searchOption" id="searchOption"></select>
+        </td>
+    </tr>
+   </form>
+   <tr><td colspan="3">&nbsp;</td></tr>
+   <form wicket:id="paletteForm">
+    <tr>
+        <td><span wicket:id="availableOptionsHeader">[available header]</span></td>
+        <td>&nbsp;</td>
+        <td><span wicket:id="selectedOptionsHeader">[selected header]</span></td>
+    </tr>
+    <tr>
+        <td>
+            <select wicket:id="availableOptions" style="height: 200px;" ondblclick="jQuery('#palette_addButton').click();">[choices]</select>    
+        </td>
+        <td class="buttons">
+            <a wicket:id="addButton">&gt;</a><br/>
+            <a wicket:id="addAllButton">&gt;&gt;</a><br/>
+            <a wicket:id="removeButton">&lt;</a><br/>
+            <a wicket:id="removeAllButton">&lt;&lt;</a><br/>
+        </td>
+        <td>
+            <span wicket:id="selectedOptions.error"></span>
+            <select wicket:id="selectedOptions" style="height: 200px;" ondblclick="jQuery('#palette_removeButton').click();">[selection]</select>  
+        </td>
+    </tr>
+   </form>    
+  </table>
+</wicket:panel>

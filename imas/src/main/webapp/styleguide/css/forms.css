@@ -1,0 +1,387 @@
+/* WIRECARD AG */
+/* -----------------------------------------------------
+[Forms Stylesheet]
+Project:		Wirecard Enterprise Portal
+Version:		1.0
+Last Change:	15.10.2008
+----------------------------------------------------- */
+
+/* Columns */
+div.first_column, .second_column {
+	float: left;
+	width: 440px;
+	margin-left: 3px;
+} * html
+div.first_column, .second_column {
+    display: inline;
+}
+div.second_column {
+	margin-left: 20px;
+}
+
+/* Headline Bar */
+div.headline_bar {
+    background: transparent url( ../img/panel_grey_gradient_left.gif ) repeat-x;
+    margin-top: 10px;
+    width: 906px;
+    height: 21px;
+}
+	div.headline_bar h2 {
+	    text-align: left;
+	    float: left;
+	    padding-left: 8px;
+	    height: 21px;
+	    line-height: 21px;
+	}
+	div.headline_bar a.expand span.gradient_start,
+	div.headline_bar a.collapse span.gradient_start {
+	    background: url( ../img/panel_grey_gradient_left_be.gif ) no-repeat left top;
+	    float: left;
+	    height: 18px;
+	    width: auto;
+	    padding-top: 3px;
+	    padding-left: 8px;
+	    color: #1D3770;
+	    font-size: 12px;
+	    font-weight: bold;
+	}
+	div.headline_bar a.expand,
+	div.headline_bar a.collapse {
+	    background: transparent;
+	    float: left;
+	    width: 100%;
+	    height: 21px;
+	    cursor: pointer;
+	    vertical-align: middle;
+	    line-height: 21px;
+	    text-decoration: none !important;
+	    outline: none;
+	}
+	div.headline_bar a.collapse:hover,
+	div.headline_bar a.collapse {
+	    background: transparent url( ../img/panel_grey_gradient_right_down.gif ) no-repeat right top;
+	}
+	div.headline_bar a.expand:hover,
+	div.headline_bar a.expand {
+	    background: transparent url( ../img/panel_grey_gradient_right_left.gif ) no-repeat right top;
+	}
+
+/* Search Form */
+div.search_form {
+	background-color: #E2ECF6;
+	width: 440px;
+}
+	div.search_form p {
+	    border-top: 1px solid #FFFFFF;
+	    margin: 0;
+	    padding: 2px 0 3px 0;
+	    clear: both;
+	    min-height: 23px;
+	}
+		div.search_form p.grouped {
+		    border-top: none;
+		}
+		div.search_form p.end {
+		    border-bottom: none;
+		    margin-bottom: 3px;
+		}
+	div.search_form h2 {
+		padding-left: 12px;
+	}
+	div.search_form span.headline {
+		font-size: 12px;
+		color: #666;
+		font-weight: bold;
+		padding: 0 0 0 10px;
+		margin-top: 8px;
+	}
+	div.search_form span.text {
+		font-size: 12px;
+		margin-top: 4px;
+		color: #333;
+		float: left;
+	}
+	div.search_form textarea{
+		float: left;
+	    margin-top: 3px;
+	    margin-bottom: 3px;
+	    margin-right: 4px;
+	    padding: 1px 2px;
+	    width: 229px;
+	}
+	div.search_form textarea.infobox {
+        height: 100px;
+        width: 395px;
+        margin-left: 10px;
+        background: #ffffff;
+        border: 1px solid #7F9DB9;
+    }
+	/* Labels */
+	div.search_form label {
+	    line-height: 15px;
+		padding: 4px 10px 0 10px;
+		display: block;
+	    float: left;
+	    color: #666666;
+		width: 160px;
+	}
+		div.search_form label.radio,
+		div.search_form label.checkbox {
+		    float: left;
+		    width: 300px;
+		}
+		div.search_form span.multipleSelect label.checkbox {
+            float: left;
+            width: 190px;
+            margin-left: 0px;
+            margin-bottom: 2px;
+            color: #000000;
+        }
+        div.search_form label.radio2 {
+            float: left;
+            width: 210px;
+            margin-bottom: 5px;
+        }
+		div.search_form label.date_one_field {
+		    float: left;
+		    width: 35px;
+		    padding-left: 80px;
+		}
+		div.search_form label.date_two_fields {
+		    float: left;
+		    width: 35px;
+		    padding-left: 26px;
+		}
+		div.search_form label.month {
+		    float: left;
+		    width: 35px;
+		    padding-left: 80px;
+		}
+	/* Selects */
+	div.search_form select {
+		line-height: 15px;
+		margin: 1px 4px 3px 0;
+		width:232px;
+		height:22px;
+		float: left;
+		padding: 1px 2px;
+		z-index: 1;
+	}
+		div.search_form select.month, select.year, select.amount {
+		    padding: 0;
+		    margin-right: 6px;
+		}
+		div.search_form select.month, select.year {
+		    margin-left: 10px;
+		}
+		div.search_form select.month {
+		    width: 45px;
+		}
+		div.search_form select.year {
+		    width: 60px;
+		}
+		div.search_form select.amount {
+		    width: 115px;
+		}
+		div.search_form select.status {
+		    width: 100px;
+		}
+		div.search_form select.with-help {
+		    width: 180px;
+		}
+		div.search_form .select optgroup{
+		    font-weight: normal;
+		}
+		div.search_form .select optgroup option{
+		    margin-left: 8px;
+		}
+        div.search_form span.multipleSelect.disabled{
+            border: 0;
+            background-color: #E2ECF6;
+        }
+        div.search_form span.multipleSelect{
+            display: block;
+            overflow-x: hidden;
+            width: 231px;
+            border: 1px solid #999;
+            background-color: #fff;
+            height: auto;
+            margin: 1px 4px 3px 0;
+            float: left;
+        }
+        div.search_form .multipleSelect{
+	        height: 62px;
+	        width: 235px;
+	    }
+		div.search_form .multipleSelect optgroup{
+		    font-weight: normal;
+		}
+		div.search_form .multipleSelect optgroup option{
+		    margin-left: 8px;
+		}
+	/* Inputs */
+	div.search_form input {
+		line-height: 15px;
+		padding: 2px 2px 0 2px;
+	    height: 17px;
+		float: left;
+	    margin: 1px 4px 3px 0;
+		width: 225px;
+	}
+		div.search_form input.date {
+		    width: 75px;
+		}
+		div.search_form input.time {
+		    width: 40px;
+		}
+		div.search_form input.amount {
+		    width: 44px;
+		}
+		div.search_form input.plus_help {
+			width: 160px;
+		}
+		div.search_form input.merchantaccount {
+			width: 195px !important;
+		}
+		div.search_form input.disabled {
+			background-color:transparent !important;
+			border:medium none !important;
+			color:#000000 !important;
+			padding-top:4px !important;
+		}
+	/* Checkboxes */
+	div.search_form .checkbox {
+	    height: auto;
+	    width: 19px;
+	    margin: 4px 10px 0 10px;
+	    padding: 0;
+	}
+	div.search_form span.multipleSelect input.checkbox {
+        margin: 3px 4px;
+        /*IE hack*/
+        margin: expression('0 4px;');
+    }
+	/* Radion buttons */
+    div.search_form .radio {
+        height: auto;
+        width: 19px;
+        margin: 4px 0 0 0;
+        padding: 0;
+    }
+	/* Miscellaneous */
+	div.search_form .disabled {
+	    background-color: transparent;
+	    color: #000000;
+	    border: medium none;
+        padding-top: 4px;
+	}
+	div.search_form img.help_link {
+			cursor: pointer;
+			float: left;
+		    margin-top: 4px;
+		    border: 0;
+	}
+	div.search_form img.merchantaccountbutton {
+	    cursor: pointer;
+	    vertical-align: text-bottom;
+	    padding-right: 3px;
+	    margin: 5px 0 0 4px;
+	    float: left;
+	}
+	div.search_form .datepicker {
+	    float: left;
+	    margin-top: 2px;
+	    margin-right: 6px;
+	}
+	div.search_form .small_button {
+		float: right;
+		margin-right: 24px;
+	}
+	div.search_form .preferred_currency {
+        color: #79B00C;
+    }
+
+/* Simple Form */
+div.simple_form_blue {
+	width: 430px;
+	height: 25px;
+	background: #c6dbee;
+	font-weight: bold;
+	margin: 10px 0 2px 3px;
+	font-size: 12px;
+	color: #1d3770;
+	padding: 0 0 0 10px;
+	line-height: 24px;
+}
+div.simple_form_light_blue {
+	width: 430px;
+	height: 25px;
+	background: #e2ecf6;
+	font-weight: bold;
+	margin: 5px 0 2px 3px;
+	font-size: 12px;
+	color: #1d3770;
+	padding: 0 0 0 10px;
+	line-height: 24px;
+}
+
+/* Input Field for combined usage with Error Message */
+input.error {
+	border: 2px solid #e30f0e;
+	background-color: #ffebec;
+}
+
+/* Predefined Search */
+div.predefined_search {
+	height: 30px;
+	background: #e8e8e8;
+    margin-bottom: 5px;
+}
+	div.predefined_search p {
+		color: #000;
+		margin: 5px 0 0 10px;
+	}
+	div.predefined_search label {
+		color: #000;
+		padding-right: 10px;
+	}
+	div.predefined_search select {
+		width: 320px;
+	}
+
+/* Info Box */
+div.info_box {
+	width: 430px;
+	background: #e8e8e8;
+	margin: 0 0 2px 3px;
+	font-size: 12px;
+	color: #666;
+	padding: 10px;
+	line-height: 24px;
+}
+	div.info_box h2 {
+		margin-top: 0;
+		margin-bottom: 4px;
+		padding: 5px 5px;
+	}
+
+	div.info_box ol,ul {
+		margin-left: 40px;
+	}
+	div.info_box img {
+		float: left;
+		margin-left: -35px;
+	}
+	div.info_box li {
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+	div.info_box p {
+        color: #666;
+    }
+	div.info_box div.separator {
+		background: #e8e8e8 url(../img/line_dotted_grey.gif) repeat-x left top;
+		line-height: 1px;
+		height: 1px;
+		margin: 10px 5px;
+	}

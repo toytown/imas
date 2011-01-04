@@ -1,0 +1,20 @@
+/* WIRECARD AG */
+/* -----------------------------------------------------
+[Dialog Stylesheet]
+Project:		Wirecard Enterprise Portal
+Version:		1.0
+Last Change:	03.12.2008
+----------------------------------------------------- */
+
+div#search_dialog {
+    background: transparent url(../img/busy_big.gif) no-repeat scroll left center;
+    float: left;
+    height: 40px;
+    padding-left: 50px;
+    padding-top: 10px;
+    text-align: left;
+    width: 180px;
+}
+div#search_dialog p {
+    margin-left: 0px;
+}

@@ -1,0 +1,33 @@
+<html>
+<head>
+<wicket:head/>
+</head>
+<body>
+	 <h1>Search Form Wicket Example</h1>
+		<form wicket:id="searchForm">
+			<div class="headline_bar">
+	        	<a class="collapse" href="#">
+	            	<span class="gradient_start"></span>
+	        	</a>
+			</div>
+			        
+			<div class="first_column search_form rounded_bottom">
+				<p>
+					<label class="label">Name</label>
+					<input type="sub" class="inputtext"/>
+				</p>
+				<p>
+					<label class="label">Date</label>
+					<input type="text" wicket:id="billingPeriodFrom" class="two_date_fields" style="margin-left: 70px"/><span wicket:id="billingPeriodFromDatePicker" />
+				</p>							
+			</div>
+			<div class="clearfloat"></div>
+	        <div class="button_panel">
+	        	<p>
+		            <a wicket:id="noAjaxBtn">[noAjax]</a>
+		            <a wicket:id="ajaxBtn">[noAjax]</a>
+	        	</p>
+	        </div> 		
+		</form>
+</body>
+</html>

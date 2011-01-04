@@ -1,0 +1,203 @@
+/* WIRECARD AG */
+/* -----------------------------------------------------
+[Main Navigation Element Stylesheet]
+Project:		Wirecard Enterprise Portal
+Version:		1.0
+Last Change:	15.10.2008
+----------------------------------------------------- */
+
+divdiv.dashboard {
+    margin-bottom: 16px;
+    padding: 0;
+}
+	div.dashboard a {
+		text-decoration: none;
+	}
+	div.dashboard table {
+	    width: 100%;
+	}
+
+/* Dashboard Breadcrumb in Headline Bar */
+div.dashboard div.breadcrumb {
+	width: auto;
+	height: 21px;
+	background: transparent url( ../img/panel_grey_gradient_left.gif ) repeat-x;
+}
+div.dashboard div.breadcrumb a {
+	line-height:15px;
+	font-size: 12px;
+	color: #666;
+	font-weight: bold;
+}
+div.dashboard div.breadcrumb a:hover {
+	color: #000;
+}
+div.dashboard div.breadcrumb span {
+	line-height:15px;
+	font-size: 12px;
+	color: #666;
+}
+div.dashboard div.breadcrumb span.left {
+	float: left;
+	height: 18px;
+	width: auto;
+	padding: 3px 0 0 10px;
+	background:transparent url(../img/panel_grey_gradient_left_be.gif) no-repeat scroll left top;
+}
+div.dashboard div.breadcrumb a.right {
+	float: right;
+	height: 21px;
+	width: 80%;
+	background:transparent url(../img/panel_grey_gradient_right_left.gif) no-repeat scroll right top;
+}
+div.dashboard div.breadcrumb a.down {
+	float: right;
+	height: 21px;
+	width: 80%;
+	background:transparent url(../img/panel_grey_gradient_right_down.gif) no-repeat scroll right top;
+}
+/* Dashboard Table with Entity Browser */
+div.dashboard table tr#dashboard_items td {
+    background-color: #FFFFFF;
+    width: 245px;
+    vertical-align: top;
+    border-left: 1px solid #BDBDBD;
+}
+div.dashboard table tr#dashboard_items td {
+    padding-right: 0;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+}
+div.dashboard table tr#dashboard_items td span,
+div.dashboard table tr#dashboard_items td a,
+div.dashboard table tr#dashboard_items td a.last-level
+{
+    padding: 2px 1px 2px 6px;
+    display: block;
+    color: #666666;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E8E8E8;
+    text-decoration: none;
+}
+div.dashboard table tr#dashboard_items td a.last-level:hover {
+    background: #FF9900;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+div.dashboard table tr#dashboard_items td a {
+    background: transparent url( ../img/arrow_right_grey.gif ) no-repeat right center;
+}
+div.dashboard table tr#dashboard_items td a.active,
+div.dashboard table tr#dashboard_items td a:hover {
+    background: #FF9900 url( ../img/arrow_right_white.gif ) no-repeat right center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+div.dashboard table tr#dashboard_items td.auto_width {
+    width: auto;
+    border-right: 1px solid #BDBDBD;
+}
+div.dashboard table tr#dashboard_items td.auto_width div {
+    width: 100%;
+}
+div.dashboard table tr#dashboard_items td.auto_width a {
+    background: #FFFFFF;
+}
+div.dashboard table tr#dashboard_items td.auto_width a.active,
+div.dashboard table tr#dashboard_items td.auto_width a:hover {
+    background: #FF9900;
+}
+div.dashboard table #dashboard_items td div {
+    height: 121px;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 245px;
+}
+div.dashboard table tr th a.current,
+div.dashboard table tr th a.current:hover,
+div.dashboard table tr th a.dash:hover {
+    background: transparent;
+    color: #000000;
+    text-decoration: none;
+}
+div.dashboard table tr.footer td a.current {
+    font-weight: bold;
+    color: #1D3770;
+    text-decoration: none;
+}
+div.dashboard table tr th {
+    background: transparent url( ../img/panel_grey_gradient_left.gif ) repeat-x;
+    height: 21px;
+    color: #666666;
+    text-align: left;
+    width: auto;
+    padding: 0px;
+}
+div.dashboard table span.gradient_start {
+    background: url( ../img/panel_grey_gradient_left_be.gif ) no-repeat left top;
+    float: left;
+    width: auto;
+    height: 18px;
+    padding-top: 3px;
+    padding-left: 8px;
+}
+div.dashboard table tr th p {
+    padding-top: 3px; /*padding-left: 8px;*/
+    float: left;
+}
+div.dashboard table tr th a.dash {
+    background: transparent;
+    color: #666666;
+    text-decoration: none;
+}
+div.dashboard table tr th a.db-plus,
+div.dashboard table tr th a.db-minus
+{
+    background: transparent;
+    float: right;
+    height: 21px;
+    color: #666666;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+div.dashboard table tr th a.db-plus:hover,
+div.dashboard table tr th a.db-plus {
+    background: transparent url( ../img/panel_grey_gradient_right_left.gif ) no-repeat right top;
+}
+div.dashboard table tr th a.db-minus:hover,
+div.dashboard table tr th a.db-minus {
+    background: transparent url( ../img/panel_grey_gradient_right_down.gif ) no-repeat right top;
+}
+
+/* Dashboard Footer */
+div.dashboard table tr.footer td p {
+    padding: 4px 0 0 9px;
+    display: block;
+    float: left;
+    margin: 0;
+}
+div.dashboard table tr.footer td span {
+    display: block;
+    height: 23px;
+}
+div.dashboard table tr.footer td span#right {
+    float: right;
+    background: transparent url( ../img/back_dashboard_footer_right.gif ) no-repeat right bottom;
+}
+div.dashboard table tr.footer td span#left {
+    float: left;
+    background: transparent url( ../img/back_dashboard_footer_left.gif ) no-repeat left bottom;
+}
+div.dashboard table tr.footer td {
+    background: #D8D8D8 url( ../img/back_dashboard_footer_bottom.gif ) repeat-x bottom;
+}
+div.dashboard table tr.footer td a {
+    color: #000000;
+    text-decoration: none;
+}
+div.dashboard table tr.footer td a:hover {
+    background-color: transparent;
+    color: #FFFFFF;
+    text-decoration: none;
+}

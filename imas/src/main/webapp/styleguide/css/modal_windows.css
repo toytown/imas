@@ -1,0 +1,422 @@
+/* WIRECARD AG */
+/* -----------------------------------------------------
+[Modal Windows Stylesheet]
+Project:		Wirecard Enterprise Portal
+Version:		1.0
+Last Change:	15.10.2008
+----------------------------------------------------- */
+
+table.modal_window {
+	border: 2px solid #ff9900;
+	width: 800px;
+	padding: 0;
+	margin: 0;
+}
+table.modal_window input {
+	line-height: 15px;
+	padding: 2px 2px 0 2px;
+	height: 17px;
+	float: right;
+	margin: 1px 4px 3px 0;
+	width: 225px;
+}
+table.modal_window input.checkbox {
+	width: 20px;
+	margin: 0 1px;
+	padding: 0;
+}
+table.modal_window select {
+	line-height: 15px;
+	height: 20px;
+	float: right;
+	margin: 2px 4px 3px 0;
+	width: 225px;
+}
+table.modal_window th {
+	background-color: #ff9900;
+	margin-top: 2px;
+	padding: 0 2px 0 10px;
+	color: #fff;
+	height: 20px;
+}
+table.modal_window th p {
+	float: left;
+	margin-top: 5px;
+}
+table.modal_window th .standard_button {
+	float: right;
+}
+table.modal_window th span.headline {
+	float: left;
+}
+table.modal_window th img.close {
+	float: right;
+	margin-top: 1px;
+}
+table.modal_window th.additional {
+	background-color: #ffeacb;
+	color: #666;
+	font-weight: normal;
+	height: 30px;
+}
+table.modal_window th.additional p {
+    margin: 5px 0 0 0;
+    color: #666666;
+}
+table.modal_window td.buttons {
+	background-color: #ffeacb;
+	height: 33px;
+	padding-left: 10px;
+}
+table.modal_window td.navigation_path {
+	background-color: #eee;
+	height: 25px;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 2px solid #999;
+	padding-left: 10px;
+}
+table.modal_window td.navigation_path span {
+	float: left;
+}
+table.modal_window td.navigation_path span a {
+    color: #666666;
+}
+table.modal_window td.navigation_path img {
+	float: right;
+	padding: 0 4px 0 0;
+}
+table.modal_window table.entity-browser {
+	border-top: 2px solid #999;
+	width: 100%;
+	border-collapse: collapse;
+}
+table.modal_window table.entity-browser td div {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+}
+table.modal_window table td {
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	width: 33%;
+}
+table.modal_window table td a.active {
+	border-bottom: 1px solid #999;
+	background-color: #ff9900;
+	background-image: url(../img/arrow_right_white.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+	display: block;
+	color: #fff;
+	padding: 2px 1px 2px 6px;
+	height: 20px;
+	line-height: 20px;
+	cursor: pointer;
+}
+table.modal_window table td a {
+	border-bottom: 1px solid #999;
+	background-color: #fff;
+	background-image: url(../img/arrow_right_grey.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+	display: block;
+	color: #666;
+	padding: 2px 1px 2px 6px;
+	height: 20px;
+	line-height: 20px;
+	cursor: pointer;
+}
+table.modal_window table td span {
+	border-bottom: 1px solid #999;
+	display: block;
+	color: #666;
+	padding: 2px 1px 2px 6px;
+	height: 20px;
+	line-height: 20px;
+}
+
+/* Modal Window Type 2 */
+table.modal_window_2 {
+	border: 2px solid #6ea2d2;
+	width: 800px;
+	padding: 0;
+	margin: 0;
+}
+table.modal_window_2 input {
+	line-height: 15px;
+	padding: 2px 2px 0 2px;
+	height: 17px;
+	float: right;
+	margin: 1px 4px 3px 0;
+	width: 225px;
+}
+table.modal_window_2 input.checkbox {
+	width: 20px;
+	margin: 0 1px;
+	padding: 0;
+}
+table.modal_window_2 select {
+	line-height: 15px;
+	height: 20px;
+	float: right;
+	margin: 2px 4px 3px 0;
+	width: 225px;
+}
+table.modal_window_2 th {
+	background-color: #6ea2d2;
+	margin-top: 2px;
+	padding: 0 2px 0 10px;
+	color: #fff;
+	height: 20px;
+}
+table.modal_window_2 th p {
+	float: left;
+	margin-top: 5px;
+}
+table.modal_window_2 th .standard_button {
+	float: right;
+}
+table.modal_window_2 th span.headline {
+	float: left;
+}
+table.modal_window_2 th img.close {
+	float: right;
+	margin-top: 1px;
+}
+table.modal_window_2 th.additional {
+	background-color: #e2ecf6;
+	color: #666;
+	font-weight: normal;
+	height: 30px;
+}
+table.modal_window_2 th.additional p {
+    margin: 5px 0 0 0;
+    color: #666666;
+}
+table.modal_window_2 td.buttons {
+	background-color: #e2ecf6;
+	height: 33px;
+	padding-left: 10px;
+}
+table.modal_window_2 td.navigation_path {
+	background-color: #eee;
+	height: 25px;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 2px solid #999;
+	padding-left: 10px;
+}
+table.modal_window_2 td.navigation_path span {
+	float: left;
+}
+table.modal_window_2 td.navigation_path span a {
+    color: #666666;
+}
+table.modal_window_2 td.navigation_path img {
+	float: right;
+	padding: 0 4px 0 0;
+}
+table.modal_window_2 table.entity-browser {
+	border-top: 2px solid #999;
+	width: 100%;
+	border-collapse: collapse;
+}
+table.modal_window_2 table.entity-browser td div {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+}
+table.modal_window_2 table td {
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	width: 33%;
+}
+table.modal_window_2 table td a.active {
+	border-bottom: 1px solid #999;
+	background-color: #6ea2d2;
+	background-image: url(../img/arrow_right_white.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+	display: block;
+	color: #fff;
+	padding: 2px 1px 2px 6px;
+	height: 20px;
+	line-height: 20px;
+	cursor: pointer;
+}
+table.modal_window_2 table td a {
+	border-bottom: 1px solid #999;
+	background-color: #fff;
+	background-image: url(../img/arrow_right_grey.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+	display: block;
+	color: #666;
+	padding: 2px 1px 2px 6px;
+	height: 20px;
+	line-height: 20px;
+	cursor: pointer;
+}
+table.modal_window_2 table td span {
+	border-bottom: 1px solid #999;
+	display: block;
+	color: #666;
+	padding: 2px 1px 2px 6px;
+	height: 20px;
+	line-height: 20px;
+}
+
+/* Modal Window Type 3 */
+div.scroll {
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 200px;
+    	min-height: 200px;
+	border: 1px solid #999;
+	background: #eee;
+}
+
+
+/* Selection */
+div.selection {
+	overflow-x: hidden;
+	overflow-y: auto;
+	max-height: 350px;
+	min-height: 100px;
+	border: 1px solid #999;
+	background: #eee;
+}
+	div.selection table {
+		width: 100%;
+		border-collapse: collapse;
+		border: 0px;
+		background: #fff;
+	}
+		div.selection table td {
+			border-bottom: 1px solid #999;
+			border-left: 1px solid #999;
+			border-right: 0px;
+		}	
+			div.selection table td a {
+				border-bottom: 0px;
+			}
+				div.selection table td a.arrow {
+					background-color: #fff;
+					background-image: url(../img/arrow_right_grey.gif);
+					background-position: right center;
+					background-repeat: no-repeat;
+					display: block;
+					color: #666;
+					padding: 2px 1px 2px 6px;
+					height: 20px;
+					line-height: 20px;
+					cursor: pointer;
+				}
+				div.selection table td a.arrow-down {
+					background-color: #fff;
+					background-image: url(../img/arrow_nav_open.gif);
+					background-position: right center;
+					background-repeat: no-repeat;
+					display: block;
+					color: #666;
+					padding: 2px 1px 2px 6px;
+					height: 20px;
+					line-height: 20px;
+					cursor: pointer;
+				}
+			div.selection table td.first_row {
+				width: 15px;
+				border-bottom: 1px solid #999;
+			}
+			div.selection table td.auto_row {
+				width: auto;
+				padding-left: 5px;
+			}
+			div.selection table td.row_22 {
+				width: 22px;
+			}
+
+	div.selection table.margin_left_step_1 {
+		margin-left: 39px;
+	}
+	div.selection table.margin_left_step_2 {
+		margin-left: 78px;
+	}
+	div.selection table.margin_left_step_3 {
+        margin-left: 117px;
+    }
+    div.selection table.margin_left_step_4 {
+        margin-left: 158px;
+    }
+    
+/* Multiselect Target */    
+table.modal_window .multiselecttarget td,
+table.modal_window_2 .multiselecttarget td {
+    vertical-align: top;
+    background-color: #FFFFFF;
+	vertical-align: top;
+	padding-right: 0;
+	border-top:    2px solid #999999;
+	border-bottom: 1px solid #999999;
+	border-left:   1px solid #999999;
+	border-right:  1px solid #999999;
+}
+    table.modal_window .multiselecttarget td div,
+	table.modal_window_2 .multiselecttarget td div {
+		overflow: auto;
+		overflow-y: auto;
+		overflow-x: hidden;
+		width: auto;
+	}
+		table.modal_window .multiselecttarget td span,
+		table.modal_window .multiselecttarget td a,
+		table.modal_window_2 .multiselecttarget td span,
+		table.modal_window_2 .multiselecttarget td a {
+			padding: 2px 1px 2px 6px;
+			display: block;
+			color: #666666;
+			background: #FFFFFF;
+			border-bottom: 1px solid #999999;
+        }
+            table.modal_window .multiselecttarget td a.active,
+            table.modal_window .multiselecttarget td a.hover {
+				background: #FF9900;
+				color: #FFFFFF;
+				text-decoration: none;
+            }
+			table.modal_window_2 .multiselecttarget td a.active,
+			table.modal_window_2 .multiselecttarget td a.hover {
+				background: #6ea2d2;
+				color: #FFFFFF;
+				text-decoration: none;
+            }
+
+/* Drag and drop */
+div.dragover span,
+div.dragover a {
+    background-color: #FF9900 !important;
+}
+div.dragtarget span,
+div.dragtarget a {
+	background-color: #FFFACB !important;
+	color: #666666 !important;
+}
+.browser_dragobject {
+	font-family: "Lucida Grande", "Lucida Sans", Arial, Helvetica,  sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+	line-height: 15px;
+	background-color: #FF9900;
+	width: 238px;
+	height: 15px;
+	margin: 0px;
+	padding-top: 2px;
+	padding-right: 1px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	border: solid 1px;
+}

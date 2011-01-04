@@ -27,7 +27,7 @@ import org.odlabs.wiquery.ui.dialog.Dialog;
 import org.odlabs.wiquery.ui.tabs.Tabs;
 import org.odlabs.wiquery.ui.themes.ThemeUiHelper;
 
-public class MainPage extends AbstractWepTemplatePage {
+public class MainPage extends IMASWebTemplatePage {
 
 
     // Wicket components

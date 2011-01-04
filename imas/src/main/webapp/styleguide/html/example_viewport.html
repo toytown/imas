@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Wirecard Enterprise Portal</title>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+	<script src="../js/jquery-1.4.4.js"  type="text/javascript"></script>
+    <script src="../js/jquery.corner.js" type="text/javascript"></script>
+    <script src="../js/custom.corners.js" type="text/javascript"></script>
+
+</head>
+<body>
+	<a name="top"></a>
+	<div id="viewport">
+		<!-- [login_time] start -->
+		<div id="login_time">
+  				<span>Remaining Login-Time</span>
+                <div id="refresh_bar_border">
+                	<div id="refresh_bar_img"></div>
+
+				</div>
+		</div>
+		<!-- [login_time] end -->
+		<!-- [header] start -->
+		<div id="header">
+			<img src="../img/logo_wirecard.gif" id="logo" title="&copy; 2008 wirecard AG | All rights reserved." alt="Logo">
+			<form action="" method="post" id="logoutForm">
+				<p class="user_navi"><a href="#" id="logout-link" class="user-navi-link">Log out, firstname.lastname</a></p>
+
+			</form>
+		</div>
+		<!-- [header] end -->
+		<div class="clearfloat"></div>
+		<!-- [content] start -->
+		<div id="content">
+		<!-- [dashboard] start -->
+			<div class="dashboard">
+				<div class="breadcrumb">
+
+					<span class="left"><a href="#">Step 1</a> / <a href="#">Step 2</a> / <a href="#">Step 3</a></span><a href="#" class="down"></a>
+				</div>
+				<div style="margin:0 3px">
+					<table id="dashboard_table" border="0" cellpadding="0" cellspacing="0">
+		            	<tbody>
+
+		                    <tr id="dashboard_items">
+		                    <td>
+		                        <div id="db-level1">
+		                            <a name="entry" href="#" title="entry">entry</a>
+		                            <a name="entry" href="#" title="entry">entry</a>
+		                            <a name="entry" href="#" title="entry">entry</a>
+		                            <a name="entry" href="#" title="entry">entry</a>
+
+		                            <a name="entry" href="#" title="entry">entry</a>
+		                            <a name="entry" href="#" title="entry">entry</a>
+		                            <a name="entry" href="#" title="entry">entry</a>
+		                            <a name="entry" href="#" title="entry">entry</a>
+		                        </div>
+		                    </td>
+		                    <td>
+
+		                        <div id="db-level2">
+		                            <span>&nbsp;</span>
+		                            <span>&nbsp;</span>
+		                            <span>&nbsp;</span>
+		                            <span>&nbsp;</span>
+		                            <span>&nbsp;</span>
+		                            <span>&nbsp;</span>
+		                         </div>
+		                    </td>
+
+		                    <td class="auto_width">
+		                        <div id="db-level3">
+		                            <span>&nbsp;</span>
+		                            <span>&nbsp;</span>
+		                            <span>&nbsp;</span>
+		                            <span>&nbsp;</span>
+		                            <span>&nbsp;</span>
+		                            <span>&nbsp;</span>
+		                        </div>
+
+		                    </td>
+		                </tr>
+		                <tr class="footer">
+		                    <td colspan="4">
+		                    	<span id="left">&nbsp;</span>
+		                        <p><a class="current" href="#">Homepage</a></p>
+		                    	<span id="right">&nbsp;</span>
+		                    </td>
+
+		                </tr>
+		            </tbody>
+				</table>
+				</div>
+			</div>
+		<!-- [dashboard] end -->
+		<!-- [headline] start -->
+			<h1>HEADLINE</h1>
+
+		<!-- [headline] end -->
+		<!-- [predefined_search] start -->
+		<div class="predefined_search rounded_all">
+			<p>
+				<label for="search_filters">Label</label>
+				<select id="search_filters">
+					<option>Filter 1</option>
+					<option>Filter 2</option>
+
+					<option>Filter 3</option>
+					<option>Filter 4</option>
+				</select>
+			</p>
+		</div>
+		<!-- [predefined_search] end -->
+		<!-- [search_form] start -->
+		<div class="headline_bar">
+
+			<a href="" class="collapse">
+				<span class="gradient_start">Headline</span>
+			</a>
+		</div>
+	    <div class="first_column search_form rounded_bottom">
+	      <p>
+	      	<label for="input1" title="input1">Input Field</label>
+	      	<input name="input1" type="text"  id="input1" maxlength="25" size="10" value="" />
+
+	      </p>
+	      <p>
+	      	<label for="input2" title="">Input Field Plus Help</label>
+	      	<input name="input2" type="text" id="input2" maxlength="25" size="10" value="" />
+	      	<img src="../img/button_help.gif" alt="" class="help_link" />
+	      </p>
+	      <p>
+	      	<label for="input3" title="">Input Field Short</label>
+
+	      	<input name="input3" type="text" id="input3" maxlength="25" size="10" value="" />
+	      </p>
+	      <p>
+		      <label for="select" title="">Dropdown</label>
+		      <select name="select" id="select" class="select">
+		        <option value="value1" selected="selected">Option 1</option>
+		        <option value="value2">Option 2</option>
+
+		        <option value="value3">Option 3</option>
+		      </select>
+	      </p>
+	      <p>
+	      	<label id="amountLabel" for="select" title="label">Dropdown Plus Input Field</label>
+		      <select name="select" id="amountLabel" class="amount">
+		        <option value="value1">Option 1</option>
+
+		        <option value="value 2" selected="selected">Option 2</option>
+		        <option value="value 3">Option 3</option>
+		      </select>
+		      <input name="input" value="value" id="input" class="text amount" type="text" />
+	      </p>
+	      <p>
+		      <label for="select-multiple1" title="label">Multiple Select With Optgroup</label>
+
+		      <select name="select-multiple" multiple="multiple" id="select-multiple1" class="multipleSelect">
+		        <optgroup label="Label">
+		        <option value="value1">Option 1</option>
+		        <option value="value2">Option 2</option>
+		        <option value="value3">Option 3</option>
+		        <option value="value4">Option 4</option>
+		        <option value="value5">Option 5</option>
+
+		        <option value="value6">Option 6</option>
+		        </optgroup>
+		      </select>
+	      </p>
+	      <p>
+		      <label for="select-multiple2" title="label">Multiple Select</label>
+		      <select name="select-multiple" multiple="multiple" id="select-multiple2" class="multipleSelect">
+		        <option value="value1">Option 1</option>
+
+		        <option value="value2">Option 2</option>
+		        <option value="value3">Option 3</option>
+		        <option value="value4">Option 4</option>
+		        <option value="value5">Option 5</option>
+		        <option value="value6">Option 6</option>
+		      </select>
+
+	      </p>
+	      <p>
+		      <label for="select-multiple" title="label">Entitiy Browser Icon</label>
+		      <input type="text" readonly="readonly" value="Selection" name="name" class="disabled merchantaccount" />
+		      <img src="../img/icon_entitybrowser.gif" class="merchantaccountbutton" />
+	      </p>
+		  <p>
+		      <input name="checkbox" id="checkbox" type="checkbox" class="checkbox" />
+
+		      <img src="../img/button_help.gif" class="help_link" />
+		      <label for="checkbox" title="checkbox" class="checkbox">Check Box Plus Help</label>
+		  </p>
+		  <p>
+		      <input name="radio" id="radio" type="radio" class="checkbox" />
+		      <img src="../img/button_help.gif" class="help_link" />
+		      <label for="radio" title="radio" class="radio">Radio Button Plus Help</label>
+	      </p>
+
+	      <p>
+	      	<label for="date_time_from" title="">Date and Time Selection</label>
+	      	<label class="date_two_fields" for="date_time_from" title="">from</label>
+	      	<input id="date_time_from" name="receivedStart" size="20" maxlength="20" class="date" value="" type="text">
+	      	<a class="datepicker" href="#"> <img src="../img/button_datepicker.gif" id="datepicker" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+	      	<input id="input" name="input" size="20" maxlength="20" class="time" value="" type="text" />
+	      </p>
+
+	      <p>
+		      <label for="date_time_to">&nbsp;</label>
+		      <label class="date_two_fields" for="date_time_to" title="">to</label>
+		      <input id="date_time_to" name="date_time_to" size="20" maxlength="20" class="date" value="" type="text">
+		      <a class="datepicker" href="#"><img src="../img/button_datepicker.gif" id="button_datepicker_txsrch_txt_receivedto" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+		      <input id="time" name="time" size="20" maxlength="20" class="time" value="" type="text" />
+	      </p>
+	      <p>
+
+			<label id="amountLabel" for="select" title="label">Date Selection</label>
+			<label class="date_one_field" for="label" title="txsrch_lbl_to">from</label>
+			<input name="input" value="" id="input" class="date" type="text" />
+			<a class="datepicker" href="#"><img src="../img/button_datepicker.gif" id="button_datepicker_txsrch_txt_receivedto" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+	      </p>
+			<label for="select" title="label"></label>
+			<label class="date_one_field" for="label" title="txsrch_lbl_to">to</label>
+
+			<input name="input" value="" id="input" class="date" type="text" />
+			<a class="datepicker" href="#"><img src="../img/button_datepicker.gif" id="button_datepicker_txsrch_txt_receivedto" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+	      </p>
+	      <p>
+			<label for="select" title="label" ></label>
+			<label class="month" for="label" title="txsrch_lbl_to">Month</label>
+			<input name="input" value="" id="input" class="date" type="text" />
+			<a class="datepicker" href="#"><img src="../img/button_datepicker.gif" id="button_datepicker_txsrch_txt_receivedto" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+
+	      </p>
+	      <p>
+	      	<label for="txsrch_sel_currency" title="txsrch_lbl_currency">Text Field</label>
+	      	<textarea name="textarea" rows="4" id="textarea"></textarea>
+	      </p>
+	    </div>
+	
+	  <div class="second_column search_form rounded_bottom">
+	      <p>
+
+		      <label for="date_and_time_selection" title="Date and Time Selection">Date and Time Selection</label>
+		      <label class="date_two_fields" for="select_date" title="from">from</label>
+		      <input id="select_date" name="select_date" size="20" maxlength="20" class="date" value="" type="text" />
+		      <a class="datepicker" href="#"> <img src="../img/button_datepicker.gif" id="img_select_date_and_time" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+		      <input id="select_time" name="select_time" size="20" maxlength="20" class="time" value="" type="text" />
+	      </p>
+	      <p>
+
+	      	<label for="date_time_to">&nbsp;</label>
+	      	<label class="date_two_fields" for="select_date_2" title="to">to</label>
+	     	 <input id="select_date_2" name="select_date_2" size="20" maxlength="20" class="date" value="" type="text" />
+	      	<a class="datepicker" href="#"><img src="../img/button_datepicker.gif" id="img_select_date_and_time_2" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+	      	<input id="select_time_2" name="select_time_2" size="20" maxlength="20" class="time" value="" type="text" />
+	      </p>
+	      <p>
+	      	<label id="amountLabel" for="select" title="label">Date Selection</label>
+
+	      	<label class="date_one_field" for="select_date_3" title="from">from</label>
+	      	<input name="select_date_3" value="" id="select_date_3" class="date" type="text" />
+	      	<a class="datepicker" href="#"><img src="../img/button_datepicker.gif" id="img_select_date_and_time_3" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+	      </p>
+	      <p>
+	 	     <label for="select" title="label"></label>
+		     <label class="date_one_field" for="select_date_4" title="to">to</label>
+	 	     <input name="select_date_4" value="" id="select_date_4" class="date" type="text" />
+
+	 	     <a class="datepicker" href="#"><img src="../img/button_datepicker.gif" id="img_select_date_and_time_4" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+	      </p>
+	      <p>
+	     	 <label for="select" title="label"></label>
+	    	  <label class="month" for="month" title="Month">Month</label>
+	    	  <input name="month" value="" id="month" class="date" type="text" />
+	    	  <a class="datepicker" href="#"><img src="../img/button_datepicker.gif" id="image" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+	     </p>
+
+	     <p>
+	      	<label for="textarea" title="Text Field">Text Field</label>
+	      	<textarea name="textarea" rows="4" id="textarea"></textarea>
+	      </p>
+	      <p>
+	      	<label for="small_button_1">Label with Button</label>
+	      	<a name="small_button" id="small_button_1" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+
+	      </p>
+	      <p>
+	      	<label for="small_button_2">Label with two Buttons</label>
+	      	<a name="small_button" id="small_button_2" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+	      </p>
+	      <p class="grouped">
+	      	<a name="small_button" id="small_button_3" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+
+	      </p>
+	      <p>
+	      	<span class="headline">Headline</span>
+	      	<label for="text">Label with Button</label>
+	      	<a name="small_button" id="small_button_4" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+	      </p>
+	      <p>
+
+	      	<span class="headline">Headline with longer Text </span>
+	      	<label for="text">Label</label>
+	      	<span class="text" id="text">Text</span>
+	      	<a name="small_button" id="small_button_5" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+	      </p>
+	      <p>
+		      <label for="select" title="">Dropdown</label>
+
+		      <select name="select" id="select" class="select">
+		        <option value="value1" selected="selected">Option 1</option>
+		        <option value="value2">Option 2</option>
+		        <option value="value3">Option 3</option>
+		      </select>
+		      <a name="small_button" id="small_button_6" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+	      </p>
+
+	    </div>
+		<!-- [search_form] end -->
+		<div class="clearfloat"></div>
+		<div class="button_panel">
+			<a class="standard_button" href="#" onclick="this.blur();"><span>Standard Button Active</span></a>
+			<a class="emphasized_button" href="#" onclick="this.blur();"><span>Emphasized Button Active</span></a>
+		</div>
+		<!-- [search result paging] start -->
+
+		<div class="paging rounded_all">
+		<table class="paging" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="range">Showing 1 - 20 of 10000</td>
+				<td class="pages">
+					<a class="first">First</a>
+					<a class="previous">Previous ...</a>
+
+					<span>
+						<a class="active">1</a>
+						<a>2</a>
+						<a style="cursor: pointer;">3</a>
+						<a style="cursor: pointer;">4</a>
+						<a style="cursor: pointer;">5</a>
+
+						<a style="cursor: pointer;">6</a>
+						<a style="cursor: pointer;">7</a>
+						<a style="cursor: pointer;">8</a>
+						<a style="cursor: pointer;">9</a>
+						<a style="cursor: pointer;">10</a>
+					</span>
+
+					<a style="visibility: visible;" id="searchResult_nextNav" class="next">... Next</a>
+					<a style="visibility: visible;" id="searchResult_lastNav" class="last"> Last</a>
+				</td>
+				<td class="per_page">Display per Page:
+					<span>
+					<a>5</a>
+					<a>10</a>
+
+					<a class="active">20</a>
+					<a>50</a>
+					</span>
+				</td>
+			</tr>
+		</table>
+		</div>
+		<!-- [search result paging] end -->
+
+		<!-- [result_table] start -->
+		<table class="result_table">
+		    <thead>
+		      <tr>
+		        <th class="top"> <span class="checkboxes"> <span class="left"> <img name="sortAscending" id="id" src="../img/tbl_sortAsc_inactive.png"><img name="sortDescending" id="id" src="../img/tbl_sortDesc_active.gif"> </span> </span> </th>
+		        <th class="top"> <span class="checkboxes"> <span class="left">&nbsp;</span> </span> </th>
+
+		        <th class="top"> <span class="checkboxes"> <span class="left"> <img name="sortAscending" id="id" src="../img/tbl_sortAsc_inactive.png"><img name="sortDescending" id="id" src="../img/tbl_sortDesc_inactive.png"> </span> </span> </th>
+		        <th class="top"> <span class="checkboxes"> <span class="left"> <img name="sortAscending" id="id" src="../img/tbl_sortAsc_inactive.png"><img name="sortDescending" id="id" src="../img/tbl_sortDesc_inactive.png"> </span> </span> </th>
+		        <th class="top"> <span class="checkboxes"> <span class="left"> <img name="sortAscending" id="id" src="../img/tbl_sortAsc_inactive.png"><img name="sortDescending" id="id" src="../img/tbl_sortDesc_inactive.png"> </span> </span> </th>
+
+		        <th class="top"> <span class="checkboxes"> <span class="left"> <img name="sortAscending" id="id" src="../img/tbl_sortAsc_inactive.png"><img name="sortDescending" id="id" src="../img/tbl_sortDesc_inactive.png"> </span> </span> </th>
+		        <th class="top last end"> <div class="control-buttons"> <img id="manageResultTable" title="Manage columns in search result table." alt="Manage columns in search result table." src="../img/tbl_manage_results_closed.gif" class="editFlag"> <span class="checkboxes"> <span class="left">&nbsp;</span> </span> </div></th>
+		      </tr>
+
+		      <tr>
+		        <th  class="nowrap" style="width: 180px;"> <span class="captions"> <span>Headline</span> </span> </th>
+		        <th style="width: 34px;"> <span class="captions">&nbsp;</span> </th>
+		        <th> <span class="captions"> <span>Headline</span> </span> </th>
+
+		        <th> <span class="captions"> <span>Headline</span> </span> </th>
+		        <th> <span class="captions"> <span>Headline</span> </span> </th>
+		        <th> <span class="captions"> <span>Headline</span> </span> </th>
+
+		        <th class="last end" style="width: 250px;"> <span class="captions">&nbsp;</span> </th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr class="odd">
+		        <td class="nowrap"><span style="cursor: pointer;">5274 5600 9955 6053</span> </td>
+		        <td align="center"><img src="../img/icon_card.gif" alt="CARD" title="__Card__"> </td>
+
+		        <td class="nowrap"><span>Wire Card Tester</span> </td>
+		        <td  class="nowrap"><span>7/21/08 3:52:55 PM</span> </td>
+		        <td>&nbsp;</td>
+		        <td><span>activated</span></td>
+		        <td class="end"><div class="control-buttons"> <img id="details" title="View Details" alt="View Details" src="../img/tbl_showDetails.png" class="input-image controlFlag">
+		            <div >&nbsp;</div>
+
+		          </div></td>
+		      </tr>
+		      <tr class="even">
+		        <td  class="nowrap"><span>5160 0799 5662 5684</span> </td>
+		        <td align="center"><img src="../img/icon_card.gif" alt="CARD" title="__Card__"> </td>
+		        <td class="col-id"><span>Wire Card Tester</span> </td>
+
+		        <td class="nowrap"><span>7/21/08 3:43:15 PM</span> </td>
+		        <td>&nbsp;</td>
+		        <td><span>activated</span></td>
+		        <td class="end"><div class="control-buttons"> <img id="details" title="View Details" alt="View Details" src="../img/tbl_showDetails.png" class="input-image controlFlag">
+		            <div >&nbsp;</div>
+		          </div></td>
+		      </tr>
+
+		    </tbody>
+		  </table>
+		<!-- [result_table] end -->
+		
+		</div>
+		
+		<!-- [footer] start -->
+		<div id="footer_margin"></div>
+		<div id="footer">&copy; 2008 wirecard AG | All rights reserved.</div>
+		<!-- [footer] end -->
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Wirecard Enterprise Portal</title>
+    <link rel="stylesheet" type="text/css" href="../css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../css/forms.css" />
+    <link rel="stylesheet" type="text/css" href="../css/buttons.css" />
+    <script src="../js/jquery-1.4.4.js"  type="text/javascript"></script>
+    <script src="../js/jquery.corner.js" type="text/javascript"></script>
+    <script src="../js/custom.corners.js" type="text/javascript"></script>
+    
+</head>
+<body>
+<div class="preview">
+	<div class="headline_bar">
+		<a href="" class="collapse">
+			<span class="gradient_start">Headline</span>
+		</a>
+
+	</div>
+    <div class="first_column search_form rounded_bottom">
+      <p>
+      	<label for="input1" title="input1">Input Field</label>
+      	<input name="input1" type="text"  id="input1" maxlength="25" size="10" value="" />
+      </p>
+      <p>
+      	<label for="input2" title="">Input Field Plus Help</label>
+
+      	<input name="input2" type="text" id="input2" maxlength="25" size="10" value="" />
+      	<img src="../../img/button_help.gif" alt="" class="help_link" />
+      </p>
+      <p>
+      	<label for="input3" title="">Input Field Short</label>
+      	<input name="input3" type="text" id="input3" maxlength="25" size="10" value="" />
+      </p>
+      <p>
+
+	      <label for="select" title="">Dropdown</label>
+	      <select name="select" id="select" class="select">
+	        <option value="value1" selected="selected">Option 1</option>
+	        <option value="value2">Option 2</option>
+	        <option value="value3">Option 3</option>
+	      </select>
+      </p>
+
+      <p>
+      	<label id="amountLabel" for="select" title="label">Dropdown Plus Input Field</label>
+	      <select name="select" id="amountLabel" class="amount">
+	        <option value="value1">Option 1</option>
+	        <option value="value 2" selected="selected">Option 2</option>
+	        <option value="value 3">Option 3</option>
+	      </select>
+
+	      <input name="input" value="value" id="input" class="text amount" type="text" />
+      </p>
+      <p>
+	      <label for="select-multiple1" title="label">Multiple Select With Optgroup</label>
+	      <select name="select-multiple" multiple="multiple" id="select-multiple1" class="multipleSelect">
+	        <optgroup label="Label">
+	        <option value="value1">Option 1</option>
+	        <option value="value2">Option 2</option>
+
+	        <option value="value3">Option 3</option>
+	        <option value="value4">Option 4</option>
+	        <option value="value5">Option 5</option>
+	        <option value="value6">Option 6</option>
+	        </optgroup>
+	      </select>
+      </p>
+
+      <p>
+	      <label for="select-multiple2" title="label">Multiple Select</label>
+	      <select name="select-multiple" multiple="multiple" id="select-multiple2" class="multipleSelect">
+	        <option value="value1">Option 1</option>
+	        <option value="value2">Option 2</option>
+	        <option value="value3">Option 3</option>
+	        <option value="value4">Option 4</option>
+
+	        <option value="value5">Option 5</option>
+	        <option value="value6">Option 6</option>
+	      </select>
+      </p>
+      <p>
+	      <label title="label">Multiple Checkbox Select</label>
+          <span class="multipleSelect">
+
+              <input id="mcb1" type="checkbox" class="checkbox" />
+              <label for="mcb1" class="checkbox">Option 1</label>
+              <input id="mcb2" type="checkbox" class="checkbox" />
+              <label for="mcb2" class="checkbox">Option 2</label>
+              <input id="mcb3" type="checkbox" class="checkbox" />
+              <label for="mcb3" class="checkbox">Option 3</label>
+              <input id="mcb4" type="checkbox" class="checkbox" />
+
+              <label for="mcb4" class="checkbox">Option 4</label>
+              <input id="mcb5" type="checkbox" class="checkbox" />
+              <label for="mcb5" class="checkbox">Option 5</label>
+              <input id="mcb6" type="checkbox" class="checkbox" />
+              <label for="mcb6" class="checkbox">Option 6</label>
+          </span>
+      </p>
+
+      <p>
+	      <label for="select-multiple" title="label">Entitiy Browser Icon</label>
+	      <input type="text" readonly="readonly" value="Selection" name="name" class="disabled merchantaccount" />
+	      <img src="../../img/icon_entitybrowser.gif" class="merchantaccountbutton" />
+      </p>
+	  <p>
+	      <input name="checkbox" id="checkbox" type="checkbox" class="checkbox" />
+	      <img src="../../img/button_help.gif" class="help_link" />
+
+	      <label for="checkbox" title="checkbox" class="checkbox">Check Box Plus Help</label>
+	  </p>
+	  <p>
+	      <input name="radio" id="radio" type="radio" class="checkbox" />
+	      <img src="../../img/button_help.gif" class="help_link" />
+	      <label for="radio" title="radio" class="radio">Radio Button Plus Help</label>
+      </p>
+      <p>
+
+      	<label for="date_time_from" title="">Date and Time Selection</label>
+      	<label class="date_two_fields" for="date_time_from" title="">from</label>
+      	<input id="date_time_from" name="receivedStart" size="20" maxlength="20" class="date" value="" type="text">
+      	<a class="datepicker" href="#"> <img src="../../img/button_datepicker.gif" id="datepicker" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+      	<input id="input" name="input" size="20" maxlength="20" class="time" value="" type="text" />
+      </p>
+      <p>
+
+	      <label for="date_time_to">&nbsp;</label>
+	      <label class="date_two_fields" for="date_time_to" title="">to</label>
+	      <input id="date_time_to" name="date_time_to" size="20" maxlength="20" class="date" value="" type="text">
+	      <a class="datepicker" href="#"><img src="../../img/button_datepicker.gif" id="button_datepicker_txsrch_txt_receivedto" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+	      <input id="time" name="time" size="20" maxlength="20" class="time" value="" type="text" />
+      </p>
+      <p>
+		<label id="amountLabel" for="select" title="label">Date Selection</label>
+
+		<label class="date_one_field" for="label" title="txsrch_lbl_to">from</label>
+		<input name="input" value="" id="input" class="date" type="text" />
+		<a class="datepicker" href="#"><img src="../../img/button_datepicker.gif" id="button_datepicker_txsrch_txt_receivedto" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+      </p>
+      <p class="grouped">
+		<label for="select" title="label"></label>
+		<label class="date_one_field" for="label" title="txsrch_lbl_to">to</label>
+		<input name="input" value="" id="input" class="date" type="text" />
+
+		<a class="datepicker" href="#"><img src="../../img/button_datepicker.gif" id="button_datepicker_txsrch_txt_receivedto" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+      </p>
+      <p>
+		<label for="select" title="label" ></label>
+		<label class="month" for="label" title="txsrch_lbl_to">Month</label>
+		<input name="input" value="" id="input" class="date" type="text" />
+		<a class="datepicker" href="#"><img src="../../img/button_datepicker.gif" id="button_datepicker_txsrch_txt_receivedto" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+      </p>
+
+      <p>
+      	<label for="txsrch_sel_currency" title="txsrch_lbl_currency">Text Field</label>
+      	<textarea name="textarea" rows="4" id="textarea"></textarea>
+      </p>
+    </div>
+
+  <div class="second_column search_form rounded_bottom">
+      <p>
+
+	      <label for="date_and_time_selection" title="Date and Time Selection">Date and Time Selection</label>
+	      <label class="date_two_fields" for="select_date" title="from">from</label>
+	      <input id="select_date" name="select_date" size="20" maxlength="20" class="date" value="" type="text" />
+	      <a class="datepicker" href="#"> <img src="../../img/button_datepicker.gif" id="img_select_date_and_time" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+	      <input id="select_time" name="select_time" size="20" maxlength="20" class="time" value="" type="text" />
+      </p>
+      <p>
+
+      	<label for="date_time_to">&nbsp;</label>
+      	<label class="date_two_fields" for="select_date_2" title="to">to</label>
+     	 <input id="select_date_2" name="select_date_2" size="20" maxlength="20" class="date" value="" type="text" />
+      	<a class="datepicker" href="#"><img src="../../img/button_datepicker.gif" id="img_select_date_and_time_2" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+      	<input id="select_time_2" name="select_time_2" size="20" maxlength="20" class="time" value="" type="text" />
+      </p>
+      <p>
+      	<label id="amountLabel" for="select" title="label">Date Selection</label>
+
+      	<label class="date_one_field" for="select_date_3" title="from">from</label>
+      	<input name="select_date_3" value="" id="select_date_3" class="date" type="text" />
+      	<a class="datepicker" href="#"><img src="../../img/button_datepicker.gif" id="img_select_date_and_time_3" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+      </p>
+      <p>
+ 	     <label for="select" title="label"></label>
+	     <label class="date_one_field" for="select_date_4" title="to">to</label>
+ 	     <input name="select_date_4" value="" id="select_date_4" class="date" type="text" />
+
+ 	     <a class="datepicker" href="#"><img src="../../img/button_datepicker.gif" id="img_select_date_and_time_4" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+      </p>
+      <p>
+     	 <label for="select" title="label"></label>
+    	  <label class="month" for="month" title="Month">Month</label>
+    	  <input name="month" value="" id="month" class="date" type="text" />
+    	  <a class="datepicker" href="#"><img src="../../img/button_datepicker.gif" id="image" title="Select Date &amp; Time" alt="Select Date &amp; Time"></a>
+     </p>
+
+     <p>
+      	<label for="textarea" title="Text Field">Text Field</label>
+      	<textarea name="textarea" rows="4" id="textarea"></textarea>
+      </p>
+      <p>
+      	<label for="small_button_1">Label with Button</label>
+      	<a name="small_button" id="small_button_1" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+
+      </p>
+      <p>
+      	<label for="small_button_2">Label with two Buttons</label>
+      	<a name="small_button" id="small_button_2" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+      </p>
+      <p class="grouped">
+      	<a name="small_button" id="small_button_3" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+
+      </p>
+      <p>
+      	<span class="headline">Headline</span>
+      	<label for="text">Label with Button</label>
+      	<a name="small_button" id="small_button_4" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+      </p>
+      <p>
+
+      	<span class="headline">Headline with longer Text </span>
+      	<label for="text">Label</label>
+      	<span class="text" id="text">Text</span>
+      	<a name="small_button" id="small_button_5" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+      </p>
+      <p>
+	      <label for="select" title="">Dropdown</label>
+
+	      <select name="select" id="select" class="select">
+	        <option value="value1" selected="selected">Option 1</option>
+	        <option value="value2">Option 2</option>
+	        <option value="value3">Option 3</option>
+	      </select>
+	      <a name="small_button" id="small_button_6" class="small_button" href="#" onclick="this.blur();"><span>Small Button</span></a>
+      </p>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* WIRECARD AG */
+/* -----------------------------------------------------
+[Typography Stylesheet]
+Project:		Wirecard Enterprise Portal
+Version:		1.0
+Last Change:	15.10.2008
+----------------------------------------------------- */
+
+h1.success {
+    color: #79b00d;
+}
+
+h1.failure {
+    color: #e4100f;
+}
+
+h1 span.inactive {
+    color: #666;
+}

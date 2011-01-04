@@ -1,0 +1,16 @@
+/* WIRECARD AG */
+/* -----------------------------------------------------
+[Corners Stylesheet]
+Project:		Wirecard Enterprise Portal
+Version:		1.0
+Last Change:	15.10.2008
+----------------------------------------------------- */
+
+div.rounded {
+	float: left; 
+	width: 100%;
+	height: 30px;
+	background: #c6dbee;
+	text-align: center;
+	font-weight: bold;
+}

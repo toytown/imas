@@ -1,0 +1,469 @@
+/* WIRECARD AG */
+/* -----------------------------------------------------
+[Result Table Stylesheet]
+Project:		Wirecard Enterprise Portal
+Version:		1.0
+Last Change:	04.02.2009
+----------------------------------------------------- */
+
+/* Bread Crumb */
+.searchresult_breadcrumb {
+    background-color: #c6dbee;
+    min-height: 27px;
+}
+    div.searchresult_breadcrumb p {
+        padding: 2px 0;
+    }
+
+    div.searchresult_breadcrumb a {
+        color: #1D3770;
+    }
+
+    div.searchresult_breadcrumb a:hover {
+        color: #000000;
+    }
+
+/* Bulk Controls */
+.bulk_controls {
+    background-color: #e7e7e7;
+    height: 30px;
+    margin-top: 2px;
+    width: auto;
+    padding-left: 5px;
+    padding-top: 4px;
+}
+	.bulk_controls label {
+	    float: left;
+	    margin: 5px 0;
+	    padding: 0 5px;
+	}
+
+	.bulk_controls select {
+	    margin-top: 3px;
+	    float: left;
+	}
+	.bulk_controls select option {
+        margin-left: 5px;
+    }
+	.bulk_controls a.standard_button {
+	    margin-top: 3px;
+	    margin-left: 4px;
+	}
+	.bulk_controls span.brw {
+        height: 25px;
+        padding: 0 !important;
+        margin: 0px 5px 0px 1px;
+        float: left;
+        border-right: 1px solid #FFFFFF;
+    }
+
+/* Result Table */
+table.result_table  {
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 10px 0px 0px 0px;
+    padding: 0;
+	width: 100%;
+	float: left;
+}
+	table.result_table tr.even td {
+	    background-color: #fff;
+	}
+	table.result_table tr.odd td {
+	    background-color: #e7e7e7;
+	}
+	table.result_table tr.details_panel td {
+		    background-color: #ffd599;
+		    height: 26px;
+	}
+	table.result_table tr.details_panel select {
+		    float: left;
+		    margin: 2px 5px 4px 0;
+	}
+
+    table.result_table  tr.active td {
+        color: #000000;
+    }
+	table.result_table  tr.bulk_success td{
+		background-color: #c8dc9d;
+		border-top:solid 2px #79b00c;
+		border-bottom:solid 2px #79b00c;
+	}
+	table.result_table  tr.bulk_error td{
+		background-color: #fbcfb0;
+		border-top:solid 2px #79b00c;
+		border-bottom:solid 2px #79b00c;
+	}
+	table.result_table  tr.end td {
+	    border-bottom: none;
+	}
+	table.result_table  td.end {
+	    border-right: solid #999 1px;
+	}
+	table.result_table  th {
+	    border-right: solid #fff 1px;
+		border-left: solid #999 1px;
+	    background-color: #e2eCf6;
+	    color: #1d3770;
+		height: 23px;
+	    padding-left: 0px;
+	    vertical-align: top;
+	}
+		table.result_table  th.top {
+				border-top: solid #999 1px;
+			}
+		table.result_table  th.end {
+		    border-right: solid #999 1px;
+		}
+		table.result_table  th.last {
+			border-right: solid #999 1px;
+		}
+	table.result_table  td {
+	    border-right: solid #999 1px;
+		border-left: solid #999 1px;
+	    border-bottom: solid #999 1px;
+	    height: 22px;
+	    padding: 0px 3px 0px 3px;
+	    vertical-align: top;
+	}
+	table.result_table  td.settings {
+		margin:0;
+		padding:0;
+	}
+	table.result_table  div.control-buttons {
+	    text-align: left;
+	    position: relative;
+	    margin-top: 0px;
+	    margin-bottom: 2px;
+	    top: 0px;
+	}
+	* html table.result_table  div.control-buttons {
+		top: -1px !important;
+	}
+	table.result_table  img.controlFlag {
+	    position: absolute;
+	    top: 1px;
+	    right: -18px;
+	    cursor: pointer;
+	    height: auto;
+	}
+	table.result_table  img.controlFlagLeft,
+	    .controlFlagLeftOpen {
+	    position: absolute;
+	    left: -19px;
+	    top: 0;
+	    cursor: pointer;
+	}
+	table.result_table  img.editFlag {
+		cursor:pointer;
+		position:absolute;
+		right:-15px;
+		top:21px;
+	}
+	table.result_table  .selector {
+	    text-align: center;
+	    width: 22px;
+	    vertical-align: middle;
+	}
+	table.result_table  .captions {
+	    display: block;
+	    background-color: #E2ECF6;
+	    color: #1D3770;
+	    text-align: left;
+	   	padding: 3px 3px 0px 3px;
+	}
+	table.result_table  .checkboxes {
+	    display: block;
+	    background: #E2ECF6 url( ../img/table_ck_top_th_repeat.png ) top left repeat-x;
+	    height: 23px;
+	    padding: 0px 2px 0px 2px;
+	}
+		table.result_table  .checkboxes img {
+			cursor: pointer;
+		    padding: 4px 0 0 2px;
+			margin:0;
+		}
+	table.result_table  .move_right {
+		float:right;
+	}
+	table.result_table  .move_left {
+		float:left;
+	}
+
+/* Miscellaneous */
+table.result_table  .left{
+	text-align:left;
+	float:left;
+}
+table.result_table  .center{
+	text-align: center;
+}
+table.result_table  .right {
+	text-align: right;
+}
+table.result_table  .nowrap{
+	white-space:nowrap;
+}
+.control_buttons {
+    text-align: left;
+    position: relative;
+    margin: 0;
+    top: 0px;
+	left:0px;
+	height: auto;
+	width:100%;
+}
+.control_flag {
+	position: absolute;
+	top: 2px;
+	right: -18px;
+	cursor: pointer;
+	height: auto;
+} * html
+.control_flag {
+    right: -19px;
+}
+.edit_flag {
+	position: absolute;
+	right: -15px;
+	top: 3px;
+	cursor: pointer;
+}
+.important_value {
+    color: #CC0000
+}
+.warning_value {
+    color: #e30f0e
+}
+
+
+/* Customizing Table */
+table.result_table  table.customizing {
+    background-color: #fff;
+	width: 100%;
+    border: solid #6da3cf 3px;
+    overflow: visible;
+	}
+	table.result_table  table.customizing td {
+	    /*width: 200px;*/
+	    border-left: none;
+		font-size: 11px;
+	    color: #333333;
+	    padding: 1px 0px 0px 0px;
+
+	}
+	table.result_table  table.customizing th {
+	    background-color: #6da3cf;
+	    color: #fff;
+	    font-weight: normal;
+	    text-align: left;
+	    padding-left: 5px;
+		border: none;
+		height: 20px;
+	}
+	table.result_table  table.customizing tr.info td {
+	    background-color: #E7E7E7 !important;
+	    width: auto;
+	    padding: 4px !important;
+	    border-right: none;
+	}
+	.header-showDetails tr.info.buttons td {
+		border-bottom: none;
+	}
+	table.customizing tr.info td p {
+		color: #666;
+		margin: 0px;
+	}
+	table.customizing tr.info td .livehelp p {
+		margin: 5px;
+	}
+	table.customizing tr.info td span.brw {
+	    height: 25px;
+	    padding: 0 !important;
+	    margin: 0px 5px 0px 1px;
+	    float: left;
+	    border-right: 1px solid #999999;
+	}
+	table.customizing tr.info td .checkbox {
+		margin: 3px 5px !important;
+		float:left;
+	}
+	table.customizing label.as_default {
+		float: left;
+		font-size: 12px;
+		margin: 5px 0px;
+		padding: 0 5px;
+		line-height: 15px;
+		width: 60px;
+	}
+	table.customizing .help-link {
+		float: left;
+		margin: 0 10px 0 3px;
+	}
+    table.customizing img.help_link {
+            cursor: pointer;
+            float: left;
+            margin-top: 4px;
+            border: 0;
+    }
+	table.customizing .display-status {
+	    border-right: none;
+	    width: 25px;
+	}
+	table.customizing td.end {
+	    border-right: none;
+	}
+	table.customizing input.checkbox {
+	    margin: 0 5px;
+	    padding: 0 ! Important;
+	}
+
+/* Details*/
+table.result_table  tr.active_details {
+	border-left: 2px solid #ff9900 !important;
+	border-right: 1px solid #ff9900 !important;
+	border-top: 2px solid #ff9900 !important;
+	border-bottom: 2px solid #ff9900 !important;
+}
+table.result_table  tr.active_details td {
+	background-color: #ffd599 !important;
+
+}
+.search_details {
+    background-color: #ff9900;
+    padding: 0 0 10px 10px !important;
+}
+	.search_details table {
+		background-color: #ff9900;
+		width: 100%;
+		height: 100%;
+		border-collapse: collapse;
+	}
+	.search_details h2 {
+	    font-size: 12px;
+	    font-weight: bold;
+	    text-align: left;
+	    color: #FFFFFF;
+	    line-height: 20px;
+	}
+	.search_details tbody {
+		background-color: #fff;
+	}
+	.search_details tr td {
+	    font-size: 11px;
+	    padding-top: 2px;
+	    border-top: solid 1px #999;
+	    border-bottom: solid 1px #999;
+	    border-left: 0px;
+	    border-right: 0px;
+	}
+	.search_details tr td > span, .search_details tr td > label {
+	    font-size: 11px;
+	}
+	.search_details tr.even td {
+	    background-color: #fff;
+	}
+	.search_details tr.odd td {
+	    background-color: #e7e7e7;
+	}
+	.search_details td.headline{
+		color: #333;
+		font-weight: bold;
+	}
+	.search_details td.active {
+		border-bottom: 0px;
+	}
+	.search_details td.text{
+		color: #000;
+		font-weight: bold;
+	}
+	.search_details .column_001,
+	.search_details .column_003 {
+	    width: 165px;
+	    border-left: none;
+	}
+	.search_details .column_002,
+	.search_details .column_004 {
+	    font-weight: bold;
+	    color: #000000;
+	}
+	.search_details_edit td {
+	    background-color: #FFD599 !important;
+	    border-top: solid #ff9900 2px !important;
+	    border-left: none;
+	    border-bottom: none;
+	}
+	.search_details tr.transaction_details_even td{
+		background-color: #fff;
+		border-top: solid 1px #ddd;
+		border-bottom: solid 1px #ddd;
+		border-right: solid 0px #fff;
+	}
+	.search_details tr.transaction_details_odd td{
+		background-color: #e7e7e7;
+		border-top: solid 1px #fff;
+		border-bottom: solid 1px #fff;
+		border-right: solid 0px #fff;
+	}
+
+	/* --- Payment management -> Search Transaction -> Details  ---- */
+    table.card-tran-details {
+        width: 98%;
+        margin: 0px 0px -1px 5px !important;
+    }
+
+    table.card-tran-details table.details-full tr.even td {
+        border-bottom: solid #DDDDDD 1px !important;
+    }
+    table.card-tran-details table.details-full tr.odd td {
+        border-bottom: solid #FFFFFF 1px !important;
+    }
+    table.card-tran-details table.details-full tr.even.first td {
+        border-top: solid #DDDDDD 1px !important;
+    }
+    table.card-tran-details table.details-full tr.odd.first td {
+        border-top: solid #FFFFFF 1px !important;
+    }
+    table.card-tran-details table.details-full tr.last td {
+        border-bottom: none !important;
+    }
+    table.card-tran-details td.card-proc-col-1 {
+        padding: 3px 0px 0px 5px;
+        width: 99% !important;
+        font-weight: bold;
+        color: black;
+        border-top: solid #FD9A01 1px !important;
+    }
+
+    table.card-tran-details td.card-detail-col-1 { width: 98% !important; padding: 0px; }
+    table.card-tran-details td.card-detail-col-2 { width: 2% !important; padding: 0px; }
+
+    table.card-tran-details td.card-param-col-1 { width:15% !important; padding-left: 10px; padding-right: 10px; }
+    table.card-tran-details td.card-param-col-2 { width:15% !important; font-weight: bold; color: black; }
+
+    .card-tran-details-bottom-element { position: relative; float: right; right: 4px; }
+    .card-tran-details-first-element  { position: relative; float: right; right: 9px; }
+    p.card-tran-details-spacer        { position: relative; float: right; right: 7px; }
+
+.tooltip {
+    cursor: help;
+}
+
+.tooltip > span {
+    border-bottom: 1px dotted;
+}
+
+#tooltip {
+    position: absolute;
+    z-index: 3000;
+    border: 1px solid #999;
+    background-color: #FEFF99;
+    padding: 5px;
+    opacity: 0.85;
+    -moz-border-radius: 4px;
+}
+#tooltip h3, #tooltip div {
+    margin: 0;
+    color: #333;
+}

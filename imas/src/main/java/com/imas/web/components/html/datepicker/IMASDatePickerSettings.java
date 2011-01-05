@@ -22,7 +22,7 @@ public class IMASDatePickerSettings extends DatePickerSettings {
     }
     @Override
     public String getIfFormat(Locale locale) {
-        return "%d.%m.%Y";
+        return "%d-%m-%Y";
     }
     
     public static IMASDatePickerSettings getInstance() {

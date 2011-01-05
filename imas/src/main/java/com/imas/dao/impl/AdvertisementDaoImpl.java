@@ -2,6 +2,7 @@ package com.imas.dao.impl;
 
 import java.util.List;
 
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -25,17 +26,43 @@ public class AdvertisementDaoImpl extends GenericDaoImpl<Advertisement, Long> im
         
         CriteriaBuilder cBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Advertisement> criteriaQuery = cBuilder.createQuery(Advertisement.class);
-        Root<Advertisement> invoice = criteriaQuery.from(Advertisement.class);
-        criteriaQuery.select(invoice);
+        Root<Advertisement> advert = criteriaQuery.from(Advertisement.class);
+        criteriaQuery.select(advert);
         
-        TypedQuery<Advertisement> q = buildCriteriaQuery(searchRequest, cBuilder, invoice, criteriaQuery);
+        TypedQuery<Advertisement> q = buildCriteriaQuery(searchRequest, cBuilder, advert, criteriaQuery);
         
         CriteriaUtil.setPagination(q, searchRequest);
 
         
         return q.getResultList();
     }
+    
+    
+    
+    @Override
+    public int countByFilter(AdvertisementSearchFilter searchFilter) {
+        CriteriaBuilder cBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Long> criteriaQuery = cBuilder.createQuery(Long.class);
+        Root<Advertisement> advert = criteriaQuery.from(Advertisement.class);
+        criteriaQuery.select(cBuilder.count(advert));
+        
+        Query q = buildCriteriaQuery(searchFilter, cBuilder, advert, criteriaQuery);
 
+        return ((Long)q.getSingleResult()).intValue();
+    }
+    
+    
+    /**
+     * Builds criteria based on input search parameters
+     * 
+     * 
+     * @param <T>
+     * @param filter
+     * @param cBuilder
+     * @param advert
+     * @param criteriaQuery
+     * @return
+     */
     private <T> TypedQuery<T> buildCriteriaQuery(AdvertisementSearchFilter filter, CriteriaBuilder cBuilder, Root<Advertisement> advert, CriteriaQuery<T> criteriaQuery) {
 
         CriteriaUtil criteria = new CriteriaUtil(cBuilder);
@@ -72,7 +99,7 @@ public class AdvertisementDaoImpl extends GenericDaoImpl<Advertisement, Long> im
             criteria.equal(filter.getUserName(), "user", advert);
         }
 
-        if (!filter.getAppartmentTypes().isEmpty()) {            
+        if (filter.getAppartmentTypes() != null && !filter.getAppartmentTypes().isEmpty()) {            
             criteria.in("categoryType", filter.getAppartmentTypes(), advert);
         }
         
@@ -82,6 +109,13 @@ public class AdvertisementDaoImpl extends GenericDaoImpl<Advertisement, Long> im
     @Override
     public Images findImageById(long id) {
         return entityManager.find(Images.class, id);
+    }
+
+    @Override
+    public List<Advertisement> findAdvertByPostalCode(String zip) {
+        TypedQuery<Advertisement> q = entityManager.createQuery("from Advertisement a where a.areaCode like :zipCode", Advertisement.class);
+        q.setParameter("zipCode", zip + "%");
+        return q.getResultList();
     }
 
     /*

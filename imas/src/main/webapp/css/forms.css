@@ -221,9 +221,9 @@ div.search_form {
 		}
 	/* Inputs */
 	div.search_form input {
-		line-height: 15px;
+		line-height: 20px;
 		padding: 2px 2px 0 2px;
-	    height: 17px;
+	    height: 22px;
 		float: left;
 	    margin: 1px 4px 3px 0;
 		width: 225px;

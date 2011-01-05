@@ -16,9 +16,11 @@ public interface AdvertisementService {
 	
 	public void delete(Advertisement advert);
 	
-	public List<Advertisement> findAdvertByZip(String zip);
+	public List<Advertisement> findAdvertByPostalCode(String zip);
 	
 	public List<Advertisement> findAdvertisement(AdvertisementSearchFilter searchRequest);
+	
+	public int countByFilter(AdvertisementSearchFilter searchRequest);
 	
 	public Images findRealStateImageById(long id);
 

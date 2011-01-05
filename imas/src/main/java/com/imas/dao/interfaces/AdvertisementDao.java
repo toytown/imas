@@ -10,6 +10,10 @@ public interface AdvertisementDao extends GenericDao<Advertisement, Long> {
 
 	public List<Advertisement> findAdvertBySearchCriteria(AdvertisementSearchFilter searchRequest);	
 	
+	public int countByFilter(AdvertisementSearchFilter searchRequest);
+	
 	public Images findImageById(long id);
+	
+	public List<Advertisement> findAdvertByPostalCode(String zip);
 
 }

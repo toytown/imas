@@ -92,8 +92,14 @@ public class AdvertisementServiceImpl implements AdvertisementService {
     }
 
     @Override
-    public List<Advertisement> findAdvertByZip(String zip) {
-        return null;
+    public List<Advertisement> findAdvertByPostalCode(String zip) {
+        return advertisementDao.findAdvertByPostalCode(zip);
+    }
+
+    @Override
+    public int countByFilter(AdvertisementSearchFilter searchRequest) {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }

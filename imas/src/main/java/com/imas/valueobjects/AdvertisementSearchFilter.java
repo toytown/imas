@@ -1,25 +1,52 @@
 package com.imas.valueobjects;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
+import com.imas.common.utils.SearchFilter;
 import com.imas.model.CategoryType;
+import com.imas.model.HeatingType;
 
 public class AdvertisementSearchFilter extends SearchFilter implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    private String name;
+    private Date billingDate;
+    private List<HeatingType> heatingTypes;
+    
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public Date getBillingDate() {
+        return billingDate;
+    }
+    public void setBillingDate(Date billingDate) {
+        this.billingDate = billingDate;
+    }
+    public List<HeatingType> getHeatingTypes() {
+        return heatingTypes;
+    }
+    public void setHeatingTypes(List<HeatingType> heatingTypes) {
+        this.heatingTypes = heatingTypes;
+    }
+    
+
     private String city;
 	private String areaCode;
 
-	private String sizeFrom;
-	private String sizeTo;
-	private String roomsFrom;
-	private String roomsTo;
-	private String costFrom;
-	private String costTo;
+	private Double sizeFrom;
+	private Double sizeTo;
+	private Double roomsFrom;
+	private Double roomsTo;
+	private Double costFrom;
+	private Double costTo;
 	private String userName;
-	private SortingType sortType; 
+
 	List<CategoryType> categoryTypes;
 	
 	//fixtures
@@ -88,48 +115,6 @@ public class AdvertisementSearchFilter extends SearchFilter implements Serializa
 	}
 	public void setAreaCode(String areaCode) {
 		this.areaCode = areaCode;
-	}
-	public String getSizeFrom() {
-		return sizeFrom;
-	}
-	public void setSizeFrom(String sizeFrom) {
-		this.sizeFrom = sizeFrom;
-	}
-	public String getSizeTo() {
-		return sizeTo;
-	}
-	public void setSizeTo(String sizeTo) {
-		this.sizeTo = sizeTo;
-	}
-	public String getRoomsFrom() {
-		return roomsFrom;
-	}
-	public void setRoomsFrom(String roomsFrom) {
-		this.roomsFrom = roomsFrom;
-	}
-	public String getRoomsTo() {
-		return roomsTo;
-	}
-	public void setRoomsTo(String roomsTo) {
-		this.roomsTo = roomsTo;
-	}
-	public String getCostFrom() {
-		return costFrom;
-	}
-	public void setCostFrom(String costFrom) {
-		this.costFrom = costFrom;
-	}
-	public String getCostTo() {
-		return costTo;
-	}
-	public void setCostTo(String costTo) {
-		this.costTo = costTo;
-	}
-	public SortingType getSortType() {
-		return sortType;
-	}
-	public void setSortType(SortingType sortType) {
-		this.sortType = sortType;
 	}
 	public List<CategoryType> getAppartmentTypes() {
 		return categoryTypes;
@@ -212,6 +197,7 @@ public class AdvertisementSearchFilter extends SearchFilter implements Serializa
         result = prime * result + ((areaCode == null) ? 0 : areaCode.hashCode());
         result = prime * result + ((balconyAvailable == null) ? 0 : balconyAvailable.hashCode());
         result = prime * result + ((barrierFree == null) ? 0 : barrierFree.hashCode());
+        result = prime * result + ((billingDate == null) ? 0 : billingDate.hashCode());
         result = prime * result + ((builtYearFrom == null) ? 0 : builtYearFrom.hashCode());
         result = prime * result + ((builtYearTo == null) ? 0 : builtYearTo.hashCode());
         result = prime * result + ((categoryTypes == null) ? 0 : categoryTypes.hashCode());
@@ -223,15 +209,16 @@ public class AdvertisementSearchFilter extends SearchFilter implements Serializa
         result = prime * result + ((furnished == null) ? 0 : furnished.hashCode());
         result = prime * result + ((garageAvailable == null) ? 0 : garageAvailable.hashCode());
         result = prime * result + ((gardenAvailable == null) ? 0 : gardenAvailable.hashCode());
+        result = prime * result + ((heatingTypes == null) ? 0 : heatingTypes.hashCode());
         result = prime * result + ((kitchenAvailable == null) ? 0 : kitchenAvailable.hashCode());
         result = prime * result + ((liftAvailable == null) ? 0 : liftAvailable.hashCode());
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
         result = prime * result + ((provisionFree == null) ? 0 : provisionFree.hashCode());
         result = prime * result + ((roomsFrom == null) ? 0 : roomsFrom.hashCode());
         result = prime * result + ((roomsTo == null) ? 0 : roomsTo.hashCode());
         result = prime * result + ((seniorAppartment == null) ? 0 : seniorAppartment.hashCode());
         result = prime * result + ((sizeFrom == null) ? 0 : sizeFrom.hashCode());
         result = prime * result + ((sizeTo == null) ? 0 : sizeTo.hashCode());
-        result = prime * result + ((sortType == null) ? 0 : sortType.hashCode());
         result = prime * result + ((toiletWithBathRoom == null) ? 0 : toiletWithBathRoom.hashCode());
         result = prime * result + ((userName == null) ? 0 : userName.hashCode());
         return result;
@@ -259,6 +246,11 @@ public class AdvertisementSearchFilter extends SearchFilter implements Serializa
             if (other.barrierFree != null)
                 return false;
         } else if (!barrierFree.equals(other.barrierFree))
+            return false;
+        if (billingDate == null) {
+            if (other.billingDate != null)
+                return false;
+        } else if (!billingDate.equals(other.billingDate))
             return false;
         if (builtYearFrom == null) {
             if (other.builtYearFrom != null)
@@ -315,6 +307,11 @@ public class AdvertisementSearchFilter extends SearchFilter implements Serializa
                 return false;
         } else if (!gardenAvailable.equals(other.gardenAvailable))
             return false;
+        if (heatingTypes == null) {
+            if (other.heatingTypes != null)
+                return false;
+        } else if (!heatingTypes.equals(other.heatingTypes))
+            return false;
         if (kitchenAvailable == null) {
             if (other.kitchenAvailable != null)
                 return false;
@@ -324,6 +321,11 @@ public class AdvertisementSearchFilter extends SearchFilter implements Serializa
             if (other.liftAvailable != null)
                 return false;
         } else if (!liftAvailable.equals(other.liftAvailable))
+            return false;
+        if (name == null) {
+            if (other.name != null)
+                return false;
+        } else if (!name.equals(other.name))
             return false;
         if (provisionFree == null) {
             if (other.provisionFree != null)
@@ -355,11 +357,6 @@ public class AdvertisementSearchFilter extends SearchFilter implements Serializa
                 return false;
         } else if (!sizeTo.equals(other.sizeTo))
             return false;
-        if (sortType == null) {
-            if (other.sortType != null)
-                return false;
-        } else if (!sortType.equals(other.sortType))
-            return false;
         if (toiletWithBathRoom == null) {
             if (other.toiletWithBathRoom != null)
                 return false;
@@ -377,6 +374,84 @@ public class AdvertisementSearchFilter extends SearchFilter implements Serializa
         // TODO Auto-generated method stub
         
     }
-	
+    public Double getSizeFrom() {
+        return sizeFrom;
+    }
+    public void setSizeFrom(Double sizeFrom) {
+        this.sizeFrom = sizeFrom;
+    }
+    public Double getSizeTo() {
+        return sizeTo;
+    }
+    public void setSizeTo(Double sizeTo) {
+        this.sizeTo = sizeTo;
+    }
+    public Double getRoomsFrom() {
+        return roomsFrom;
+    }
+    public void setRoomsFrom(Double roomsFrom) {
+        this.roomsFrom = roomsFrom;
+    }
+    public Double getRoomsTo() {
+        return roomsTo;
+    }
+    public void setRoomsTo(Double roomsTo) {
+        this.roomsTo = roomsTo;
+    }
+    public Double getCostFrom() {
+        return costFrom;
+    }
+    public void setCostFrom(Double costFrom) {
+        this.costFrom = costFrom;
+    }
+    public Double getCostTo() {
+        return costTo;
+    }
+    public void setCostTo(Double costTo) {
+        this.costTo = costTo;
+    }
+    public List<CategoryType> getCategoryTypes() {
+        return categoryTypes;
+    }
+    public void setCategoryTypes(List<CategoryType> categoryTypes) {
+        this.categoryTypes = categoryTypes;
+    }
+    public Boolean getGarageAvailable() {
+        return garageAvailable;
+    }
+    public Boolean getKitchenAvailable() {
+        return kitchenAvailable;
+    }
+    public Boolean getBalconyAvailable() {
+        return balconyAvailable;
+    }
+    public Boolean getLiftAvailable() {
+        return liftAvailable;
+    }
+    public Boolean getToiletWithBathRoom() {
+        return toiletWithBathRoom;
+    }
+    public Boolean getCellarAvailable() {
+        return cellarAvailable;
+    }
+    public Boolean getGardenAvailable() {
+        return gardenAvailable;
+    }
+    public Boolean getEnergyPassAvailable() {
+        return energyPassAvailable;
+    }
+    public Boolean getFurnished() {
+        return furnished;
+    }
+    public Boolean getProvisionFree() {
+        return provisionFree;
+    }
+    public Boolean getBarrierFree() {
+        return barrierFree;
+    }
+    public Boolean getSeniorAppartment() {
+        return seniorAppartment;
+    }
+
 
 }

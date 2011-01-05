@@ -15,7 +15,7 @@ import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
-import com.imas.valueobjects.SearchFilter;
+import com.imas.common.utils.SearchFilter;
 
 public class CriteriaUtil {
     

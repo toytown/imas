@@ -1,4 +1,4 @@
-package com.imas.valueobjects;
+package com.imas.common.utils;
 
 import java.io.Serializable;
 

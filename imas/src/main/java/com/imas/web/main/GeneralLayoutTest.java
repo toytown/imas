@@ -1,5 +1,7 @@
 package com.imas.web.main;
 
+import java.io.File;
+
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.form.AjaxFormSubmitBehavior;
 import org.apache.wicket.datetime.DateConverter;
@@ -13,6 +15,7 @@ import com.imas.web.components.html.buttons.WepIndicatingAjaxSubmitButton;
 import com.imas.web.components.html.datepicker.DatePickerSettings;
 import com.imas.web.components.html.datepicker.IMASDatePicker;
 import com.imas.web.components.html.datepicker.IMASDatePickerSettings;
+import com.imas.web.components.html.link.DownloadIconLink;
 
 public class GeneralLayoutTest extends IMASWebTemplatePage {
 
@@ -77,6 +80,23 @@ public class GeneralLayoutTest extends IMASWebTemplatePage {
         searchForm.add(indicatingBtn);
         searchForm.add(btnNoAjax);
         add(searchForm);
+        
+        //download button
+        DownloadIconLink downloadIconLink = new DownloadIconLink("download", new File("test.txt")) {
+			
+			private static final long serialVersionUID = 1L;
+
+			@Override
+			public void doBeforeClick() {
+				// TODO Auto-generated method stub
+				
+			}
+		};
+		
+		searchForm.add(downloadIconLink);
+		
+		//MultipleSelect
+		
     }
 
 }

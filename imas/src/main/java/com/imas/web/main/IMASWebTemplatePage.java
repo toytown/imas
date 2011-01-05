@@ -7,6 +7,7 @@ import org.apache.wicket.protocol.http.WebResponse;
 
 import com.imas.web.components.html.buttons.CustomBusyIndicator;
 import com.imas.web.components.html.buttons.WepIndicatingAjaxSubmitButton;
+import com.imas.web.components.html.datepicker.IMASDatePicker;
 
 public abstract class IMASWebTemplatePage extends WebPage {
 
@@ -14,6 +15,7 @@ public abstract class IMASWebTemplatePage extends WebPage {
     public IMASWebTemplatePage() {
         super();
         add(CSSPackageResource.getHeaderContribution("css/styles.css"));
+        add(CSSPackageResource.getHeaderContribution(IMASDatePicker.class, "style/calendar-win2k-1.css"));
         add(CSSPackageResource.getHeaderContribution(WepIndicatingAjaxSubmitButton.class, "css/buttons.css"));
         add(JavascriptPackageResource.getHeaderContribution("js/jquery-1.4.4.js"));
         add(JavascriptPackageResource.getHeaderContribution("js/jquery.corner.js"));

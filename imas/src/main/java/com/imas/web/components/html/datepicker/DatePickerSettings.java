@@ -300,7 +300,7 @@ public class DatePickerSettings implements Serializable {
      */
     public ResourceReference getStyle() {
         if (style == null) {
-            style = newStyleAqua();
+            style = newDefaultStyle();
         }
 
         return style;
@@ -387,6 +387,16 @@ public class DatePickerSettings implements Serializable {
         return new ResourceReference(DatePickerSettings.class, "calendar_icon_1.gif");
     }
 
+    /**
+     * Create a style
+     * 
+     * @return a style
+     */
+    public final ResourceReference newDefaultStyle() {
+        return new ResourceReference(DatePickerSettings.class, "style/calendar.css");
+    }
+
+    
     /**
      * Create a style
      * 

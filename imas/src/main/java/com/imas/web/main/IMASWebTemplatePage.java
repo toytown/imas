@@ -15,7 +15,7 @@ public abstract class IMASWebTemplatePage extends WebPage {
     public IMASWebTemplatePage() {
         super();
         add(CSSPackageResource.getHeaderContribution("css/styles.css"));
-        add(CSSPackageResource.getHeaderContribution(IMASDatePicker.class, "style/calendar-win2k-1.css"));
+        add(CSSPackageResource.getHeaderContribution(IMASDatePicker.class, "style/calendar.css"));
         add(CSSPackageResource.getHeaderContribution(WepIndicatingAjaxSubmitButton.class, "css/buttons.css"));
         add(JavascriptPackageResource.getHeaderContribution("js/jquery-1.4.4.js"));
         add(JavascriptPackageResource.getHeaderContribution("js/jquery.corner.js"));

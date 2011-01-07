@@ -26,11 +26,12 @@
 				</p>	
 			    <p>
 			        <label for="heatingTypes">Heating Types</label>
-			        <span class="multipleSelect" wicket:id="heatingTypes" id="heatingTypes">[Heating types]</span>
+			        <select name="heatingTypes" wicket:id="heatingTypes">[heatingTypes]</select>
+			        
 			    </p>				
 			    <p>
 			        <label for="categoryTypes">Catgeory Types</label>
-			        <select name="categoryTypes" wicket:id="categoryTypes">[categoryTypes]</select>
+			        <span class="multipleSelect" wicket:id="categoryTypes" id="categoryTypes">[categoryTypes]</span>
 			    </p>										
 			    
 			</div>
@@ -48,6 +49,11 @@
         <wicket:container wicket:id="testWizard" />
         <div class="clearfloat"></div>
         <h2>Result Table</h2>
-        <span wicket:id="searchResultTable"/> 		
+        <div wicket:id="searchResultContainer">
+        	<div class="paging rounded_all" wicket:id="navigator" ></div>
+	        <div wicket:id="resultView">
+	        	<span wicket:id="description"></span>
+	        </div> 		
+        </div>
 </body>
 </html>

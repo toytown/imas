@@ -9,8 +9,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 @Entity(name="CategoryType")
 @Table(name = "OAS_APPARTMENT_TYPES")
+@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
 public class CategoryType implements Serializable{
 
 	private static final long serialVersionUID = -2334991354817870703L;

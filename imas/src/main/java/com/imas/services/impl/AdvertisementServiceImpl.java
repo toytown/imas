@@ -47,7 +47,7 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 
 	@Override
 	public Images findRealStateImageById(long id) {
-		return advertisementDao.findImageById(1);
+		return advertisementDao.findImageById(id);
 	}
 
 	@Override
@@ -97,9 +97,9 @@ public class AdvertisementServiceImpl implements AdvertisementService {
     }
 
     @Override
-    public int countByFilter(AdvertisementSearchFilter searchRequest) {
+    public int countByFilter(AdvertisementSearchFilter searchFilter) {
         // TODO Auto-generated method stub
-        return 0;
+        return advertisementDao.countByFilter(searchFilter);
     }
 
 }

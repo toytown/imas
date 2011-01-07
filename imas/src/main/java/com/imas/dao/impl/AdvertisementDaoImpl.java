@@ -35,6 +35,7 @@ public class AdvertisementDaoImpl extends GenericDaoImpl<Advertisement, Long> im
 
         
         return q.getResultList();
+
     }
     
     
@@ -49,6 +50,7 @@ public class AdvertisementDaoImpl extends GenericDaoImpl<Advertisement, Long> im
         Query q = buildCriteriaQuery(searchFilter, cBuilder, advert, criteriaQuery);
 
         return ((Long)q.getSingleResult()).intValue();
+     
     }
     
     

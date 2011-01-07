@@ -14,7 +14,7 @@ public class AdvertisementSearchFilter extends SearchFilter implements Serializa
 
     private String name;
     private Date billingDate;
-    private List<HeatingType> heatingTypes;
+    private HeatingType heatingTypes;
     
     public String getName() {
         return name;
@@ -28,10 +28,10 @@ public class AdvertisementSearchFilter extends SearchFilter implements Serializa
     public void setBillingDate(Date billingDate) {
         this.billingDate = billingDate;
     }
-    public List<HeatingType> getHeatingTypes() {
+    public HeatingType getHeatingTypes() {
         return heatingTypes;
     }
-    public void setHeatingTypes(List<HeatingType> heatingTypes) {
+    public void setHeatingTypes(HeatingType heatingTypes) {
         this.heatingTypes = heatingTypes;
     }
     

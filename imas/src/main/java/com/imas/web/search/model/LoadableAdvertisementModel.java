@@ -11,7 +11,7 @@ public class LoadableAdvertisementModel extends LoadableDetachableModel<Advertis
 
     private static final long serialVersionUID = 1L;
 
-    @SpringBean(name = "advertisementSearchService")
+    @SpringBean(name = "advertisementService")
 	private AdvertisementService advertisementService;
 
 	private Long advertId;
